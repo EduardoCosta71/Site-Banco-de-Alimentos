@@ -1,0 +1,313 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.site-header {
+    background-color: #ffffff;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Nome */
+.titulo {
+    color: #176b3a;
+    font-size: 24px;
+}
+
+.p {
+    color: #555;
+    font-size: 14px;
+    margin-left: 40px;
+}
+
+/* Menu */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: Arial;
+}
+
+/* Links */
+.main-nav a {
+    color: #176b3a;
+    text-decoration: none;
+}
+
+/* Botão */
+.main-nav button {
+    background-color: #176b3a;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Seção 1*/
+/* Seção principal Quem somos*/
+
+.section-main {
+    background-color: #f5f8f5;
+    padding: 80px 0;
+}
+
+/* Conteúdo da apresentação */
+.apresentação {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Textos */
+.fome {
+    color: #176b3a;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.alimentos {
+    color: #183b2a;
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.green {
+    color: #37e27f;
+}
+
+.descricao {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* Botões */
+.apresentação a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    background-color: #176b3a;
+    color: white;
+
+    padding: 12px 20px;
+    border-radius: 8px;
+
+    margin-right: 10px;
+}
+
+/* Ícones dos botões */
+.apresentação a svg {
+    fill: white;
+}
+
+/* Efeito quando passar o mouse */
+.apresentação a:hover {
+    background-color: #12552e;
+}
+
+/* Botão Ser voluntario */
+#claro {
+    background-color: #f5f8f5;
+    color: #176b3a;
+    border: 1px solid #176b3a;
+}
+
+
+/* Imagem */
+.img-fundo {
+    width: 450px;
+    height: 400px;
+
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+/* Seção 2 - Impacto  */
+
+.section-dados {
+    background-color: #ffffff;
+    padding: 25px 0;
+}
+
+.dados-ajuda {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+/* Título da seção */
+.impacto {
+    display: none;
+}
+
+/* Cada indicador */
+.dado {
+    flex: 1;
+
+    padding: 10px 30px;
+
+    border-right: 1px solid #e0e8e2;
+}
+
+/* Remove a linha do último indicador */
+.dado:last-child {
+    border-right: none;
+}
+
+/* Número + ícone */
+.dado h3 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #176b3a;
+    font-size: 24px;
+    font-weight: bold;
+
+    margin-bottom: 5px;
+}
+
+/* Ícones */
+.dado h3 svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Texto abaixo do número */
+.dado p {
+    color: #536b5d;
+    font-size: 14px;
+    margin: 0;
+}
+
+
+
+
+
+
+
+/* Seção 3 - Como ajudar */
+
+.section-ajudar {
+    background-color: #ffffff;
+    padding: 60px 0;
+}
+
+.como-ajudar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    text-align: center;
+}
+
+/* Título */
+
+.como {
+    color: #176b3a;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Texto abaixo do título */
+
+.subtitulo-ajuda {
+    color: #66756c;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+/* Cards */
+
+.ajuda {
+    display: inline-flex;
+    vertical-align: top;
+    flex-direction: column;
+
+    width: 23%;
+    min-height: 210px;
+
+    margin: 0 0.8%;
+    padding: 25px;
+
+    background-color: #f4f8f4;
+
+    border-radius: 12px;
+
+    text-align: left;
+}
+
+/* Título dos cards */
+
+.ajuda h3 {
+    color: #176b3a;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+/* Descrição */
+
+.ajuda p {
+    color: #596b61;
+    font-size: 14px;
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+}
+
+/* Link */
+
+.ajuda a {
+    color: #176b3a;
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-top: auto;
+}
+
+/* Efeito ao passar o mouse */
+
+.ajuda a:hover {
+    text-decoration: underline;
+}
