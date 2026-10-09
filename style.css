@@ -1,313 +1,683 @@
-/* Reset básico */
+
+/* ========================================
+   1. CONFIGURAÇÕES GERAIS
+======================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Cabeçalho */
-.site-header {
-    background-color: #ffffff;
+:root {
+    --verde: #176b3a;
+    --verde-escuro: #123d27;
+    --verde-claro: #eaf4ed;
+    --fundo: #f5f8f5;
+    --branco: #ffffff;
+    --texto: #25352b;
+    --texto-secundario: #617067;
+    --borda: #e0e9e2;
 }
 
-/* Container */
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: Arial, Helvetica, sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-/* Nome */
-.titulo {
-    color: #176b3a;
-    font-size: 24px;
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--branco);
+    color: var(--texto);
+    line-height: 1.6;
 }
 
-.p {
-    color: #555;
-    font-size: 14px;
-    margin-left: 40px;
+a {
+    transition: 0.3s ease;
 }
 
-/* Menu */
-.main-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-family: Arial;
-}
-
-/* Links */
-.main-nav a {
-    color: #176b3a;
-    text-decoration: none;
-}
-
-/* Botão */
-.main-nav button {
-    background-color: #176b3a;
-    color: white;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 8px;
+button {
+    font-family: inherit;
     cursor: pointer;
 }
 
 
+/* ========================================
+   2. CABEÇALHO
+======================================== */
 
-
-
-/* Seção 1*/
-/* Seção principal Quem somos*/
-
-.section-main {
-    background-color: #f5f8f5;
-    padding: 80px 0;
+.site-header {
+    width: 100%;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
 }
 
-/* Conteúdo da apresentação */
-.apresentação {
-    max-width: 1200px;
+.container {
+    max-width: 1280px;
+    min-height: 90px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 18px 30px;
 
     display: flex;
     align-items: center;
-    gap: 60px;
+    justify-content: space-between;
+    gap: 30px;
 }
 
-/* Textos */
-.fome {
-    color: #176b3a;
-    font-size: 19px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.logo {
+    flex-shrink: 0;
 }
 
-.alimentos {
-    color: #183b2a;
-    font-size: 48px;
-    line-height: 1.1;
-    margin-bottom: 20px;
+.titulo {
+    font-family: 'Manrope', sans-serif;
+    color: var(--verde-escuro);
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.3;
 }
 
-.green {
-    color: #37e27f;
+.p {
+    color: var(--texto-secundario);
+    font-size: 13px;
+    margin-top: 3px;
 }
 
-.descricao {
-    color: #555;
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 600px;
-    margin-bottom: 30px;
-}
-
-/* Botões */
-.apresentação a {
-    display: inline-flex;
+.main-nav {
+    display: flex;
     align-items: center;
-    gap: 8px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
+.main-nav a {
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 600;
     text-decoration: none;
-    background-color: #176b3a;
-    color: white;
-
-    padding: 12px 20px;
-    border-radius: 8px;
-
-    margin-right: 10px;
 }
 
-/* Ícones dos botões */
-.apresentação a svg {
-    fill: white;
+.main-nav a:hover {
+    color: var(--verde);
 }
 
-/* Efeito quando passar o mouse */
-.apresentação a:hover {
-    background-color: #12552e;
+.main-nav button {
+    background-color: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 25px;
+    padding: 11px 22px;
+    font-size: 14px;
+    font-weight: 700;
 }
 
-/* Botão Ser voluntario */
-#claro {
-    background-color: #f5f8f5;
-    color: #176b3a;
-    border: 1px solid #176b3a;
+.main-nav button:hover {
+    background-color: var(--verde-escuro);
 }
 
 
-/* Imagem */
-.img-fundo {
-    width: 450px;
-    height: 400px;
+/* ========================================
+   3. SEÇÃO PRINCIPAL
+======================================== */
 
-    object-fit: cover;
-    border-radius: 20px;
+.section-main {
+    background-color: var(--fundo);
+    padding: 75px 30px;
 }
 
-
-
-
-
-
-/* Seção 2 - Impacto  */
-
-.section-dados {
-    background-color: #ffffff;
-    padding: 25px 0;
-}
-
-.dados-ajuda {
-    max-width: 1200px;
+.apresentação {
+    max-width: 1220px;
     margin: 0 auto;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    padding: 0 20px;
+    gap: 60px;
 }
 
-/* Título da seção */
+.conteudo {
+    flex: 1;
+    min-width: 0;
+}
+
+.fome {
+    display: inline-block;
+    color: var(--verde);
+    background-color: #e4f1e7;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.alimentos {
+    font-family: 'Manrope', sans-serif;
+    color: var(--verde-escuro);
+    font-size: clamp(36px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.green {
+    display: inline;
+    color: var(--verde);
+}
+
+.descricao {
+    max-width: 570px;
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Botões da apresentação */
+
+.conteudo > a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    padding: 13px 22px;
+    border: 2px solid var(--verde);
+    border-radius: 30px;
+
+    background-color: var(--verde);
+    color: var(--branco);
+
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0 10px 10px 0;
+}
+
+.conteudo > a svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.conteudo > a:hover {
+    background-color: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+/* Segundo botão: Ser voluntário */
+
+.conteudo > a#claro {
+    background-color: var(--branco);
+    color: var(--verde);
+    border-color: #c9ddce;
+}
+
+.conteudo > a#claro:hover {
+    background-color: var(--verde-claro);
+    border-color: var(--verde);
+}
+
+/* Imagem principal */
+
+.img-fundo {
+    display: block;
+    width: 46%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(18, 61, 39, 0.12);
+}
+
+
+/* ========================================
+   4. SEÇÃO DE IMPACTO
+======================================== */
+
+.section-dados {
+    background-color: var(--branco);
+    padding: 35px 30px;
+    border-bottom: 1px solid var(--borda);
+}
+
+.dados-ajuda {
+    max-width: 1220px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+}
+
 .impacto {
     display: none;
 }
 
-/* Cada indicador */
 .dado {
     flex: 1;
-
-    padding: 10px 30px;
-
-    border-right: 1px solid #e0e8e2;
+    padding: 8px 25px;
+    border-right: 1px solid var(--borda);
 }
 
-/* Remove a linha do último indicador */
 .dado:last-child {
     border-right: none;
 }
 
-/* Número + ícone */
 .dado h3 {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 
-    color: #176b3a;
-    font-size: 24px;
-    font-weight: bold;
-
+    color: var(--verde);
+    font-family: 'Manrope', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.4;
     margin-bottom: 5px;
 }
 
-/* Ícones */
 .dado h3 svg {
-    width: 32px;
-    height: 32px;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
 }
 
-/* Texto abaixo do número */
 .dado p {
-    color: #536b5d;
-    font-size: 14px;
-    margin: 0;
+    color: var(--texto-secundario);
+    font-size: 13px;
 }
 
 
-
-
-
-
-
-/* Seção 3 - Como ajudar */
+/* ========================================
+   5. SEÇÃO COMO AJUDAR
+======================================== */
 
 .section-ajudar {
-    background-color: #ffffff;
-    padding: 60px 0;
+    background-color: var(--branco);
+    padding: 80px 30px;
 }
 
 .como-ajudar {
-    max-width: 1200px;
+    max-width: 1220px;
     margin: 0 auto;
-    padding: 0 20px;
-
     text-align: center;
 }
 
-/* Título */
-
 .como {
-    color: #176b3a;
-    font-size: 32px;
-    margin-bottom: 10px;
-}
-
-/* Texto abaixo do título */
-
-.subtitulo-ajuda {
-    color: #66756c;
-    font-size: 15px;
-    margin-bottom: 35px;
-}
-
-/* Cards */
-
-.ajuda {
-    display: inline-flex;
-    vertical-align: top;
-    flex-direction: column;
-
-    width: 23%;
-    min-height: 210px;
-
-    margin: 0 0.8%;
-    padding: 25px;
-
-    background-color: #f4f8f4;
-
-    border-radius: 12px;
-
-    text-align: left;
-}
-
-/* Título dos cards */
-
-.ajuda h3 {
-    color: #176b3a;
-    font-size: 18px;
+    font-family: 'Manrope', sans-serif;
+    color: var(--verde-escuro);
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.3;
     margin-bottom: 12px;
 }
 
-/* Descrição */
-
-.ajuda p {
-    color: #596b61;
-    font-size: 14px;
-    line-height: 1.5;
-
-    margin-bottom: 20px;
+.subtitulo-ajuda {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    margin-bottom: 40px;
 }
 
-/* Link */
+/* Cards de ajuda */
+
+.ajuda {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: top;
+    text-align: left;
+
+    width: calc(25% - 22px);
+    min-height: 245px;
+    margin: 0 9px 18px;
+
+    padding: 27px 23px;
+    background-color: var(--fundo);
+    border: 1px solid #e8efe9;
+    border-radius: 16px;
+
+    transition: 0.3s ease;
+}
+
+.ajuda:hover {
+    transform: translateY(-5px);
+    border-color: #b9d5c0;
+    box-shadow: 0 12px 30px rgba(18, 61, 39, 0.08);
+}
+
+.ajuda h3 {
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.4;
+    margin-bottom: 13px;
+}
+
+.ajuda p {
+    color: var(--texto-secundario);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
 
 .ajuda a {
-    color: #176b3a;
-    font-size: 14px;
-    font-weight: bold;
-
+    display: inline-block;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 800;
     text-decoration: none;
-
     margin-top: auto;
 }
 
-/* Efeito ao passar o mouse */
-
 .ajuda a:hover {
+    color: var(--verde-escuro);
     text-decoration: underline;
+}
+
+
+/* ========================================
+   6. SEÇÃO NOSSOS PROJETOS
+======================================== */
+
+.section-projetos {
+    background-color: var(--fundo);
+    padding: 75px 30px;
+    text-align: center;
+}
+
+.projetos {
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+.titulo-secao {
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.subtitulo-projetos {
+    max-width: 650px;
+    margin: 0 auto 28px;
+
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.lista-projetos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.link-projetos {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 24px;
+    border: 2px solid var(--verde);
+    border-radius: 30px;
+
+    color: var(--verde);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link-projetos:hover {
+    background-color: var(--verde);
+    color: var(--branco);
+}
+
+
+/* ========================================
+   7. RODAPÉ
+======================================== */
+
+.rodape {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 55px 30px 0;
+}
+
+.conteudo-rodape {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.info-rodape {
+    max-width: 360px;
+}
+
+.info-rodape h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.info-rodape p,
+.contato-rodape p {
+    color: #d5e4d9;
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 10px;
+}
+
+.links-rodape,
+.contato-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.links-rodape h3,
+.contato-rodape h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    margin-bottom: 18px;
+}
+
+.links-rodape a {
+    color: #d5e4d9;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.links-rodape a:hover {
+    color: var(--branco);
+    text-decoration: underline;
+}
+
+.direitos-rodape {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 22px 0;
+    border-top: 1px solid #386149;
+    text-align: center;
+}
+
+.direitos-rodape p {
+    color: #d5e4d9;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   8. TABLETS
+======================================== */
+
+@media (max-width: 1050px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .main-nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .apresentação {
+        gap: 35px;
+    }
+
+    .img-fundo {
+        width: 43%;
+        height: 350px;
+    }
+
+    .dado {
+        padding: 8px 12px;
+    }
+
+    .dado h3 {
+        font-size: 21px;
+    }
+
+    .ajuda {
+        width: calc(50% - 22px);
+    }
+}
+
+
+/* ========================================
+   9. CELULARES
+======================================== */
+
+@media (max-width: 700px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    .titulo {
+        font-size: 19px;
+    }
+
+    .main-nav {
+        gap: 12px 16px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .section-main {
+        padding: 45px 20px;
+    }
+
+    .apresentação {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .alimentos {
+        font-size: 37px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+    .conteudo > a {
+        padding: 12px 17px;
+        font-size: 13px;
+    }
+
+    .img-fundo {
+        width: 100%;
+        height: 280px;
+    }
+
+    .section-dados {
+        padding: 25px 15px;
+    }
+
+    .dados-ajuda {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px 0;
+    }
+
+    .dado {
+        padding: 10px 12px;
+        border-right: none;
+    }
+
+    .dado:nth-child(3) {
+        border-left: none;
+    }
+
+    .dado h3 {
+        font-size: 21px;
+        gap: 7px;
+    }
+
+    .dado h3 svg {
+        width: 23px;
+        height: 23px;
+    }
+
+    .dado p {
+        font-size: 12px;
+    }
+
+    .section-ajudar,
+    .section-projetos {
+        padding: 50px 15px;
+    }
+
+    .como,
+    .titulo-secao {
+        font-size: 27px;
+    }
+
+    .subtitulo-ajuda,
+    .subtitulo-projetos {
+        font-size: 14px;
+    }
+
+    .ajuda {
+        width: 100%;
+        min-height: 0;
+        margin: 0 0 15px;
+        padding: 24px;
+    }
+
+    .ajuda p {
+        font-size: 14px;
+    }
+
+    .conteudo-rodape {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .info-rodape {
+        max-width: 100%;
+    }
+
+    .rodape {
+        padding: 40px 22px 0;
+    }
 }
