@@ -1,7 +1,7 @@
 
 /* ========================================
-   1. CONFIGURAÇÕES GERAIS
-======================================== */
+   BANCO DE ALIMENTOS — PÁGINA INICIAL
+   ======================================== */
 
 * {
     margin: 0;
@@ -9,168 +9,152 @@
     box-sizing: border-box;
 }
 
-:root {
-    --verde: #176b3a;
-    --verde-escuro: #123d27;
-    --verde-claro: #eaf4ed;
-    --fundo: #f5f8f5;
-    --branco: #ffffff;
-    --texto: #25352b;
-    --texto-secundario: #617067;
-    --borda: #e0e9e2;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: var(--branco);
-    color: var(--texto);
+    color: #34443b;
+    background: #ffffff;
     line-height: 1.6;
 }
 
+h1, h2, h3 {
+    font-family: 'Manrope', sans-serif;
+}
+
 a {
-    transition: 0.3s ease;
+    text-decoration: none;
 }
 
-button {
-    font-family: inherit;
-    cursor: pointer;
+img {
+    display: block;
+    max-width: 100%;
 }
-
 
 /* ========================================
-   2. CABEÇALHO
-======================================== */
+   CABEÇALHO
+   ======================================== */
 
 .site-header {
     width: 100%;
-    background-color: var(--branco);
-    border-bottom: 1px solid var(--borda);
+    padding: 15px 6%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 10;
 }
 
-.container {
-    max-width: 1280px;
-    min-height: 90px;
+.site-header .container {
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 18px 30px;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: 25px;
 }
 
 .logo {
     flex-shrink: 0;
 }
 
-.titulo {
-    font-family: 'Manrope', sans-serif;
-    color: var(--verde-escuro);
-    font-size: 21px;
-    font-weight: 800;
+.logo .titulo {
+    color: #14532d;
+    font-size: 19px;
     line-height: 1.3;
+    font-weight: 800;
 }
 
-.p {
-    color: var(--texto-secundario);
-    font-size: 13px;
-    margin-top: 3px;
+.logo .p {
+    color: #287747;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    flex-wrap: wrap;
-    gap: 20px;
+    gap: 24px;
 }
 
 .main-nav a {
-    color: var(--texto);
-    font-size: 13px;
-    font-weight: 600;
-    text-decoration: none;
+    color: #34443b;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: color 0.3s;
 }
 
 .main-nav a:hover {
-    color: var(--verde);
+    color: #176b3a;
 }
 
 .main-nav button {
-    background-color: var(--verde);
-    color: var(--branco);
     border: none;
     border-radius: 25px;
-    padding: 11px 22px;
-    font-size: 14px;
+    padding: 10px 22px;
+    margin-left: 8px;
+    background: #126534;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
     font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 
 .main-nav button:hover {
-    background-color: var(--verde-escuro);
+    background: #0d4825;
 }
 
-
 /* ========================================
-   3. SEÇÃO PRINCIPAL
-======================================== */
+   SEÇÃO 1 — APRESENTAÇÃO
+   ======================================== */
 
 .section-main {
-    background-color: var(--fundo);
-    padding: 75px 30px;
+    width: 100%;
+    padding: 45px 7%;
+    background: #f2f8f3;
 }
 
 .apresentação {
-    max-width: 1220px;
+    max-width: 1400px;
+    min-height: 390px;
     margin: 0 auto;
-
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    gap: 45px;
 }
 
 .conteudo {
-    flex: 1;
     min-width: 0;
 }
 
 .fome {
-    display: inline-block;
-    color: var(--verde);
-    background-color: #e4f1e7;
-    padding: 7px 14px;
-    border-radius: 20px;
+    color: #176b3a;
     font-size: 12px;
     font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    letter-spacing: 1.8px;
+    margin-bottom: 15px;
 }
 
 .alimentos {
-    font-family: 'Manrope', sans-serif;
-    color: var(--verde-escuro);
-    font-size: clamp(36px, 4vw, 54px);
+    color: #164f30;
+    font-size: clamp(32px, 3.5vw, 48px);
     font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 22px;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .green {
-    display: inline;
-    color: var(--verde);
+    color: #218447;
 }
 
 .descricao {
-    max-width: 570px;
-    color: var(--texto-secundario);
-    font-size: 16px;
+    color: #53615a;
+    font-size: 15px;
     line-height: 1.8;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
+    max-width: 520px;
 }
 
 /* Botões da apresentação */
@@ -179,303 +163,279 @@ button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
-
-    padding: 13px 22px;
-    border: 2px solid var(--verde);
-    border-radius: 30px;
-
-    background-color: var(--verde);
-    color: var(--branco);
-
-    font-size: 14px;
+    gap: 8px;
+    padding: 12px 20px;
+    margin: 0 8px 10px 0;
+    border-radius: 25px;
+    border: 2px solid #176b3a;
+    background: #176b3a;
+    color: #ffffff;
+    font-size: 13px;
     font-weight: 700;
-    text-decoration: none;
-    margin: 0 10px 10px 0;
+    transition: all 0.3s;
 }
 
 .conteudo > a svg {
-    width: 20px;
-    height: 20px;
+    width: 19px;
+    height: 19px;
     fill: currentColor;
 }
 
 .conteudo > a:hover {
-    background-color: var(--verde-escuro);
-    border-color: var(--verde-escuro);
-    transform: translateY(-2px);
+    background: #0d4825;
+    border-color: #0d4825;
 }
 
-/* Segundo botão: Ser voluntário */
-
 .conteudo > a#claro {
-    background-color: var(--branco);
-    color: var(--verde);
-    border-color: #c9ddce;
+    background: #ffffff;
+    color: #176b3a;
 }
 
 .conteudo > a#claro:hover {
-    background-color: var(--verde-claro);
-    border-color: var(--verde);
+    background: #e4f2e7;
 }
 
 /* Imagem principal */
 
 .img-fundo {
-    display: block;
-    width: 46%;
-    height: 420px;
+    width: 100%;
+    height: 360px;
     object-fit: cover;
     object-position: center;
-    border-radius: 24px;
-    box-shadow: 0 15px 40px rgba(18, 61, 39, 0.12);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(20, 83, 45, 0.12);
 }
 
-
 /* ========================================
-   4. SEÇÃO DE IMPACTO
-======================================== */
+   SEÇÃO 2 — NOSSO IMPACTO
+   ======================================== */
 
 .section-dados {
-    background-color: var(--branco);
-    padding: 35px 30px;
-    border-bottom: 1px solid var(--borda);
+    padding: 40px 7%;
+    background: #ffffff;
 }
 
 .dados-ajuda {
-    max-width: 1220px;
+    max-width: 1400px;
     margin: 0 auto;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
 }
 
 .impacto {
-    display: none;
-}
-
-.dado {
-    flex: 1;
-    padding: 8px 25px;
-    border-right: 1px solid var(--borda);
-}
-
-.dado:last-child {
-    border-right: none;
-}
-
-.dado h3 {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    color: var(--verde);
-    font-family: 'Manrope', sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-    line-height: 1.4;
+    grid-column: 1 / -1;
+    color: #164f30;
+    font-size: 28px;
     margin-bottom: 5px;
 }
 
-.dado h3 svg {
+.dados-ajuda .dado {
+    min-width: 0;
+    min-height: 160px;
+    padding: 22px 12px;
+    background: #f0f8f3;
+    border: 1px solid #e4f0e6;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dados-ajuda .dado:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(22, 107, 58, 0.09);
+}
+
+.dados-ajuda .dado h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #164f30;
+    font-size: 27px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+
+.dados-ajuda .dado svg {
+    width: 32px;
+    height: 32px;
     flex-shrink: 0;
-    width: 28px;
-    height: 28px;
 }
 
-.dado p {
-    color: var(--texto-secundario);
-    font-size: 13px;
+.dados-ajuda .dado p {
+    color: #53615a;
+    font-size: 12px;
 }
-
 
 /* ========================================
-   5. SEÇÃO COMO AJUDAR
-======================================== */
+   SEÇÃO 3 — COMO VOCÊ PODE AJUDAR
+   ======================================== */
 
 .section-ajudar {
-    background-color: var(--branco);
-    padding: 80px 30px;
+    padding: 50px 7%;
+    background: #f2f8f3;
 }
 
 .como-ajudar {
-    max-width: 1220px;
+    max-width: 1400px;
     margin: 0 auto;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
 }
 
 .como {
-    font-family: 'Manrope', sans-serif;
-    color: var(--verde-escuro);
-    font-size: 34px;
-    font-weight: 800;
+    grid-column: 1 / -1;
+    color: #164f30;
+    font-size: 30px;
     line-height: 1.3;
-    margin-bottom: 12px;
 }
 
 .subtitulo-ajuda {
-    color: var(--texto-secundario);
+    grid-column: 1 / -1;
+    color: #53615a;
     font-size: 15px;
-    margin-bottom: 40px;
+    margin-top: -12px;
+    margin-bottom: 10px;
 }
 
-/* Cards de ajuda */
-
 .ajuda {
-    display: inline-flex;
+    min-width: 0;
+    padding: 25px 20px;
+    background: #ffffff;
+    border: 1px solid #e2eee5;
+    border-radius: 14px;
+    display: flex;
     flex-direction: column;
-    vertical-align: top;
-    text-align: left;
-
-    width: calc(25% - 22px);
-    min-height: 245px;
-    margin: 0 9px 18px;
-
-    padding: 27px 23px;
-    background-color: var(--fundo);
-    border: 1px solid #e8efe9;
-    border-radius: 16px;
-
-    transition: 0.3s ease;
+    align-items: flex-start;
+    box-shadow: 0 5px 18px rgba(20, 83, 45, 0.04);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .ajuda:hover {
     transform: translateY(-5px);
-    border-color: #b9d5c0;
-    box-shadow: 0 12px 30px rgba(18, 61, 39, 0.08);
+    box-shadow: 0 10px 25px rgba(20, 83, 45, 0.09);
 }
 
 .ajuda h3 {
-    color: var(--verde-escuro);
-    font-family: 'Manrope', sans-serif;
-    font-size: 17px;
-    font-weight: 800;
+    color: #176b3a;
+    font-size: 18px;
     line-height: 1.4;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 
 .ajuda p {
-    color: var(--texto-secundario);
+    color: #53615a;
     font-size: 13px;
     line-height: 1.8;
     margin-bottom: 22px;
+    flex-grow: 1;
 }
 
 .ajuda a {
-    display: inline-block;
-    color: var(--verde);
-    font-size: 13px;
-    font-weight: 800;
-    text-decoration: none;
+    color: #176b3a;
+    font-size: 12px;
+    font-weight: 700;
     margin-top: auto;
 }
 
 .ajuda a:hover {
-    color: var(--verde-escuro);
-    text-decoration: underline;
+    color: #0d4825;
 }
 
-
 /* ========================================
-   6. SEÇÃO NOSSOS PROJETOS
-======================================== */
+   SEÇÃO 4 — NOSSOS PROJETOS
+   ======================================== */
 
 .section-projetos {
-    background-color: var(--fundo);
-    padding: 75px 30px;
-    text-align: center;
+    padding: 50px 7%;
+    background: #ffffff;
 }
 
 .projetos {
-    max-width: 1220px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .titulo-secao {
-    color: var(--verde-escuro);
-    font-family: 'Manrope', sans-serif;
-    font-size: 34px;
-    font-weight: 800;
-    margin-bottom: 12px;
+    color: #164f30;
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 10px;
 }
 
 .subtitulo-projetos {
-    max-width: 650px;
-    margin: 0 auto 28px;
-
-    color: var(--texto-secundario);
+    color: #53615a;
     font-size: 15px;
-    line-height: 1.8;
-}
-
-.lista-projetos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .link-projetos {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    padding: 12px 24px;
-    border: 2px solid var(--verde);
-    border-radius: 30px;
-
-    color: var(--verde);
-    font-size: 14px;
+    padding: 11px 20px;
+    border-radius: 25px;
+    background: #176b3a;
+    color: #ffffff;
+    font-size: 12px;
     font-weight: 700;
-    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .link-projetos:hover {
-    background-color: var(--verde);
-    color: var(--branco);
+    background: #0d4825;
 }
 
+.lista-projetos {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
 
 /* ========================================
-   7. RODAPÉ
-======================================== */
+   RODAPÉ
+   ======================================== */
 
 .rodape {
-    background-color: var(--verde-escuro);
-    color: var(--branco);
-    padding: 55px 30px 0;
+    padding: 35px 7% 15px;
+    background: linear-gradient(110deg, #0c482b, #125c35);
+    color: #ffffff;
 }
 
 .conteudo-rodape {
-    max-width: 1220px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding-bottom: 40px;
-
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.info-rodape {
-    max-width: 360px;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 40px;
 }
 
 .info-rodape h2 {
-    font-family: 'Manrope', sans-serif;
-    font-size: 22px;
-    font-weight: 800;
-    margin-bottom: 5px;
+    font-size: 19px;
+    margin-bottom: 2px;
 }
 
-.info-rodape p,
-.contato-rodape p {
-    color: #d5e4d9;
-    font-size: 14px;
-    line-height: 1.9;
-    margin-bottom: 10px;
+.info-rodape p:first-of-type {
+    color: #d5e6da;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-bottom: 12px;
+}
+
+.info-rodape p:last-of-type {
+    max-width: 340px;
+    color: #d5e6da;
+    font-size: 12px;
+    line-height: 1.8;
 }
 
 .links-rodape,
@@ -483,97 +443,92 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    gap: 8px;
 }
 
 .links-rodape h3,
 .contato-rodape h3 {
-    font-family: 'Manrope', sans-serif;
-    font-size: 17px;
-    margin-bottom: 18px;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
-.links-rodape a {
-    color: #d5e4d9;
-    font-size: 14px;
-    text-decoration: none;
-    margin-bottom: 10px;
+.links-rodape a,
+.contato-rodape p {
+    color: #d5e6da;
+    font-size: 12px;
+    line-height: 1.7;
 }
 
 .links-rodape a:hover {
-    color: var(--branco);
-    text-decoration: underline;
+    color: #a8e6b9;
 }
 
 .direitos-rodape {
-    max-width: 1220px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 22px 0;
-    border-top: 1px solid #386149;
-    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .direitos-rodape p {
-    color: #d5e4d9;
-    font-size: 13px;
+    color: #d5e6da;
+    font-size: 11px;
 }
 
-
 /* ========================================
-   8. TABLETS
-======================================== */
+   RESPONSIVIDADE — TABLETS
+   ======================================== */
 
 @media (max-width: 1050px) {
-    .container {
+    .site-header .container {
         flex-direction: column;
-        gap: 20px;
-    }
-
-    .logo {
-        text-align: center;
-    }
-
-    .main-nav {
-        justify-content: center;
         gap: 15px;
     }
 
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px 20px;
+    }
+
     .apresentação {
-        gap: 35px;
+        gap: 25px;
+        grid-template-columns: 1fr 1fr;
     }
 
     .img-fundo {
-        width: 43%;
-        height: 350px;
+        height: 300px;
     }
 
-    .dado {
-        padding: 8px 12px;
+    .como-ajudar {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .dado h3 {
-        font-size: 21px;
+    .conteudo-rodape {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .ajuda {
-        width: calc(50% - 22px);
+    .info-rodape {
+        grid-column: 1 / -1;
     }
 }
 
-
 /* ========================================
-   9. CELULARES
-======================================== */
+   RESPONSIVIDADE — CELULARES
+   ======================================== */
 
-@media (max-width: 700px) {
-    .container {
-        padding: 20px 15px;
+@media (max-width: 650px) {
+    .site-header {
+        padding: 18px 5%;
     }
 
-    .titulo {
-        font-size: 19px;
+    .site-header .container {
+        align-items: flex-start;
     }
 
     .main-nav {
+        width: 100%;
+        justify-content: flex-start;
         gap: 12px 16px;
     }
 
@@ -581,103 +536,107 @@ button {
         font-size: 12px;
     }
 
+    .main-nav button {
+        margin-left: 0;
+    }
+
     .section-main {
-        padding: 45px 20px;
+        padding: 35px 6%;
     }
 
     .apresentação {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 30px;
+        grid-template-columns: 1fr;
+        gap: 25px;
     }
 
     .alimentos {
-        font-size: 37px;
+        font-size: 34px;
     }
 
     .descricao {
         font-size: 14px;
     }
 
-    .conteudo > a {
-        padding: 12px 17px;
-        font-size: 13px;
+    .img-fundo {
+        height: 240px;
     }
 
-    .img-fundo {
-        width: 100%;
-        height: 280px;
+    .conteudo > a {
+        font-size: 12px;
+        padding: 10px 14px;
     }
 
     .section-dados {
-        padding: 25px 15px;
+        padding: 35px 6%;
     }
 
     .dados-ajuda {
-        display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 22px 0;
+        gap: 12px;
     }
 
-    .dado {
-        padding: 10px 12px;
-        border-right: none;
+    .impacto {
+        font-size: 25px;
     }
 
-    .dado:nth-child(3) {
-        border-left: none;
+    .dados-ajuda .dado {
+        min-height: 135px;
+        padding: 15px 8px;
     }
 
-    .dado h3 {
-        font-size: 21px;
-        gap: 7px;
+    .dados-ajuda .dado h3 {
+        font-size: 22px;
     }
 
-    .dado h3 svg {
-        width: 23px;
-        height: 23px;
-    }
-
-    .dado p {
-        font-size: 12px;
+    .dados-ajuda .dado p {
+        font-size: 11px;
     }
 
     .section-ajudar,
     .section-projetos {
-        padding: 50px 15px;
+        padding: 35px 6%;
     }
 
-    .como,
+    .como-ajudar {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .como {
+        font-size: 26px;
+    }
+
+    .subtitulo-ajuda {
+        font-size: 14px;
+        margin-top: -5px;
+    }
+
+    .ajuda {
+        padding: 22px;
+    }
+
     .titulo-secao {
-        font-size: 27px;
+        font-size: 26px;
     }
 
-    .subtitulo-ajuda,
     .subtitulo-projetos {
         font-size: 14px;
     }
 
-    .ajuda {
-        width: 100%;
-        min-height: 0;
-        margin: 0 0 15px;
-        padding: 24px;
-    }
-
-    .ajuda p {
-        font-size: 14px;
-    }
-
-    .conteudo-rodape {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .info-rodape {
-        max-width: 100%;
+    .lista-projetos {
+        grid-template-columns: 1fr;
     }
 
     .rodape {
-        padding: 40px 22px 0;
+        padding: 30px 6% 15px;
+    }
+
+    .conteudo-rodape {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .info-rodape {
+        grid-column: auto;
     }
 }
