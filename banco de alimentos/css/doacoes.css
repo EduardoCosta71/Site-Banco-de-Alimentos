@@ -1,0 +1,981 @@
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #176b3a;
+    --verde-escuro: #164f30;
+    --verde-claro: #eaf5ed;
+    --verde-suave: #f4faf5;
+    --branco: #ffffff;
+    --fundo: #f7faf7;
+    --texto: #25352b;
+    --texto-secundario: #68776d;
+    --borda: #dce8de;
+    --sombra: 0 8px 25px rgba(22, 79, 48, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--branco);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Manrope', sans-serif;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+button {
+    cursor: pointer;
+}
+
+.doa {
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ========================================
+   CABEÇALHO
+   ======================================== */
+
+.site-header {
+    width: 100%;
+    background: #ffffff;
+    padding: 15px 6%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    position: relative;
+    z-index: 10;
+}
+
+.site-header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo .titulo {
+    font-size: 19px;
+    line-height: 1.3;
+    color: #14532d;
+    font-weight: 800;
+}
+
+.logo .p {
+    color: #287747;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.main-nav a {
+    color: #34443b;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a[href="ong"] {
+    color: #176b3a;
+}
+
+.main-nav a[href="ong"] {
+    border-bottom: 2px solid #176b3a;
+    padding-bottom: 8px;
+}
+
+.main-nav button {
+    border: none;
+    border-radius: 25px;
+    padding: 10px 22px;
+    margin-left: 10px;
+    background: #126534;
+    color: #ffffff;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.main-nav button:hover {
+    background: #0d4825;
+}
+/* ========================================
+   SEÇÃO 1 - APRESENTAÇÃO DAS DOAÇÕES
+======================================== */
+
+.esperanca {
+    max-width: 1240px;
+    min-height: 490px;
+    margin: 0 auto;
+    padding: 65px 30px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.espe {
+    max-width: 550px;
+}
+
+.espe h6 {
+    display: inline-block;
+    color: var(--verde);
+    background: var(--verde-claro);
+    padding: 7px 15px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.espe h1 {
+    color: var(--verde-escuro);
+    font-size: clamp(34px, 4vw, 48px);
+    line-height: 1.2;
+    letter-spacing: -1.3px;
+    margin-bottom: 22px;
+}
+
+.espe p {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.img-jovem {
+    width: 100%;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: var(--sombra);
+}
+
+/* ========================================
+   SEÇÃO 2 - CONTEÚDO DAS DOAÇÕES
+======================================== */
+
+.inscricao {
+    background: var(--fundo);
+    padding: 75px 30px 85px;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+
+    align-items: stretch;
+}
+
+.forma {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin: 0 auto 20px;
+    max-width: 760px;
+}
+
+.forma h6 {
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.forma h1 {
+    color: var(--verde-escuro);
+    font-size: clamp(28px, 3vw, 36px);
+    margin-bottom: 14px;
+}
+
+.forma p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   CARTÕES DE ALIMENTOS
+======================================== */
+
+.alimentos {
+    min-width: 0;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(22, 79, 48, 0.04);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.alimentos:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.alimentos img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 14px;
+}
+
+.alimentos h5 {
+    color: var(--verde-escuro);
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* ========================================
+   BLOCO DE DOAÇÃO FINANCEIRA
+======================================== */
+
+.expli {
+    grid-column: 1 / -1;
+    margin-top: 20px;
+    padding: 35px;
+
+    background: linear-gradient(120deg, #eaf5ed, #f7fbf7);
+    border: 1px solid var(--borda);
+    border-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    grid-template-rows: auto auto auto auto;
+    align-content: center;
+    align-items: center;
+    column-gap: 40px;
+    row-gap: 12px;
+}
+
+.expli .emoji-doa {
+    grid-column: 1;
+    grid-row: 1;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.expli h1 {
+    grid-column: 1;
+    grid-row: 2;
+    color: var(--verde-escuro);
+    font-size: 29px;
+    margin-bottom: 5px;
+}
+
+.expli p {
+    grid-column: 1;
+    grid-row: 3;
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.expli button {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: start;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 12px;
+    padding: 13px 22px;
+    background: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 9px;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.expli button:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.expli button svg {
+    flex-shrink: 0;
+}
+
+.expli img {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+/* ========================================
+   INTRODUÇÃO DO FORMULÁRIO
+======================================== */
+
+.doacao-form {
+    grid-column: 1;
+    align-self: center;
+    padding: 20px 10px 20px 0;
+}
+
+.doacao-form h1 {
+    color: var(--verde-escuro);
+    font-size: 28px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.doacao-form p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* ========================================
+   FORMULÁRIO DE DOAÇÃO DE ALIMENTOS
+======================================== */
+
+.form-doacao {
+    grid-column: 2 / 4;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    box-shadow: 0 5px 20px rgba(22, 79, 48, 0.05);
+}
+
+.form-doacao label {
+    color: var(--verde-escuro);
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.form-doacao input,
+.form-doacao select,
+.form-doacao textarea {
+    width: 100%;
+    padding: 13px 14px;
+    background: #fbfdfb;
+    color: var(--texto);
+    border: 1px solid #d5e1d7;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-doacao input::placeholder,
+.form-doacao textarea::placeholder {
+    color: #9aa69d;
+}
+
+.form-doacao input:focus,
+.form-doacao select:focus,
+.form-doacao textarea:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.10);
+}
+
+.form-doacao select {
+    cursor: pointer;
+}
+
+.form-doacao textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-doacao button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 14px 20px;
+
+    background: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.form-doacao button:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SEÇÃO 3 - FORMAS DE CONTRIBUIR
+======================================== */
+
+.forma-de-doacao {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 85px 30px;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.doacao-de-alimentos {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 20px;
+}
+
+.doacao-de-alimentos h5 {
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.doacao-de-alimentos h1 {
+    color: var(--verde-escuro);
+    font-size: clamp(28px, 3vw, 36px);
+    margin-bottom: 14px;
+}
+
+.doacao-de-alimentos p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.formas-do {
+    min-width: 0;
+    padding: 28px 22px;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(22, 79, 48, 0.04);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formas-do:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra);
+}
+
+.formas-do svg {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 20px;
+    padding: 8px;
+    background: var(--verde-claro);
+    border-radius: 10px;
+}
+
+.formas-do h5 {
+    color: var(--verde-escuro);
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.formas-do p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ========================================
+   SEÇÃO 4 - IMPACTO DAS DOAÇÕES
+======================================== */
+
+.section-impact {
+    padding: 75px 30px 85px;
+    background: var(--verde-suave);
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.impact {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.impact > svg {
+    width: 45px;
+    height: 45px;
+    margin: 0 auto 15px;
+}
+
+.impact h6 {
+    color: var(--verde);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.impact h1 {
+    color: var(--verde-escuro);
+    font-size: clamp(27px, 3vw, 36px);
+    line-height: 1.3;
+    margin-bottom: 15px;
+}
+
+.impact p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.impact button {
+    margin-top: 22px;
+    padding: 13px 23px;
+    background: var(--verde);
+    color: var(--branco);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.impact button:hover {
+    background: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   CARTÕES DE INDICADORES
+======================================== */
+
+.dado {
+    min-width: 0;
+    padding: 28px 15px;
+    text-align: center;
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(22, 79, 48, 0.04);
+}
+
+.dado h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    color: var(--verde-escuro);
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.dado h3 svg {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+}
+
+.dado p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape {
+    background: #103b25;
+    color: var(--branco);
+    padding: 55px 30px 0;
+}
+
+.conteudo-rodape {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+}
+
+.info-rodape h2 {
+    color: var(--branco);
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.info-rodape > p:first-of-type {
+    color: #b8d9c2;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+.info-rodape > p:last-of-type {
+    max-width: 420px;
+    color: #d0e2d5;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.links-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.links-rodape h3 {
+    color: var(--branco);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.links-rodape a {
+    color: #d0e2d5;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.links-rodape a:hover {
+    color: #9ce0af;
+}
+
+.direitos-rodape {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.direitos-rodape p {
+    color: #c0d5c6;
+    font-size: 13px;
+}
+
+/* ========================================
+   RESPONSIVIDADE - TABLETS
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .site-header .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        gap: 15px 20px;
+    }
+
+    .esperanca {
+        gap: 35px;
+    }
+
+    .inscricao {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .alimentos img {
+        height: 190px;
+    }
+
+    .expli {
+        grid-template-columns: 1fr 0.85fr;
+        column-gap: 25px;
+        padding: 28px;
+    }
+
+    .expli img {
+        height: 250px;
+    }
+
+    .doacao-form {
+        grid-column: 1;
+    }
+
+    .form-doacao {
+        grid-column: 2;
+    }
+
+    .forma-de-doacao {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .section-impact {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE - CELULARES
+======================================== */
+
+@media (max-width: 650px) {
+
+    .site-header .container {
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .logo .titulo {
+        font-size: 21px;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 12px 17px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .main-nav button {
+        padding: 9px 17px;
+    }
+
+    .esperanca {
+        min-height: auto;
+        padding: 45px 22px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .espe h1 {
+        font-size: 34px;
+    }
+
+    .espe p {
+        font-size: 15px;
+    }
+
+    .espe br,
+    .forma br,
+    .expli br,
+    .doacao-form br,
+    .formas-do br,
+    .impact br,
+    .dado br {
+        display: none;
+    }
+
+    .img-jovem {
+        height: 260px;
+    }
+
+    .inscricao {
+        padding: 50px 20px;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .forma {
+        margin-bottom: 15px;
+    }
+
+    .forma h1 {
+        font-size: 29px;
+    }
+
+    .alimentos img {
+        height: 210px;
+    }
+
+    .expli {
+        grid-column: 1;
+        padding: 24px;
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .expli .emoji-doa,
+    .expli h1,
+    .expli p,
+    .expli button,
+    .expli img {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .expli h1 {
+        font-size: 26px;
+    }
+
+    .expli img {
+        height: 220px;
+        margin-top: 10px;
+    }
+
+    .doacao-form {
+        grid-column: 1;
+        padding: 15px 0;
+    }
+
+    .doacao-form h1 {
+        font-size: 26px;
+    }
+
+    .form-doacao {
+        grid-column: 1;
+        padding: 22px;
+    }
+
+    .forma-de-doacao {
+        padding: 55px 20px;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .doacao-de-alimentos h1 {
+        font-size: 29px;
+    }
+
+    .formas-do {
+        padding: 25px;
+    }
+
+    .section-impact {
+        padding: 55px 20px;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .impact h1 {
+        font-size: 28px;
+    }
+
+    .dado {
+        padding: 25px 15px;
+    }
+
+    .rodape {
+        padding: 40px 22px 0;
+    }
+
+    .conteudo-rodape {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+/* ========================================
+   CELULARES PEQUENOS
+======================================== */
+
+@media (max-width: 380px) {
+
+    .espe h1 {
+        font-size: 29px;
+    }
+
+    .logo .titulo {
+        font-size: 19px;
+    }
+
+    .main-nav {
+        gap: 10px 13px;
+    }
+
+    .main-nav a {
+        font-size: 12px;
+    }
+
+    .alimentos img {
+        height: 175px;
+    }
+
+    .expli {
+        padding: 20px;
+    }
+
+    .form-doacao {
+        padding: 18px;
+    }
+
+    .impact h1 {
+        font-size: 25px;
+    }
+}
