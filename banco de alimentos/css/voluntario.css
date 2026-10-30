@@ -1,0 +1,537 @@
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #ffffff;
+    color: #26352b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+
+/* ==============================
+   CABEÇALHO
+============================== */
+
+.site-header {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-bottom: 1px solid #edf1ed;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo {
+    color: #176b3a;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.p {
+    color: #68756c;
+    font-size: 13px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.main-nav a {
+    color: #34443a;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #176b3a;
+}
+
+
+/* ==============================
+   SEÇÃO PRINCIPAL / BANNER
+============================== */
+
+.section-volun {
+    width: 100%;
+    background: linear-gradient(120deg, #eaf5ed, #f7faf7);
+    padding: 75px 5%;
+}
+
+.volunt {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 340px;
+    margin: 0 auto;
+    padding: 30px 50% 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.volunt h6 {
+    color: #176b3a;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.volunt h1 {
+    max-width: 550px;
+    color: #164f30;
+    font-family: 'Manrope', sans-serif;
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.volunt p {
+    max-width: 520px;
+    color: #58675d;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.volunt a {
+    display: inline-block;
+    background-color: #176b3a;
+    color: #ffffff;
+    padding: 13px 26px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.volunt a:hover {
+    background-color: #104d29;
+    transform: translateY(-2px);
+}
+
+.vonl {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(20, 70, 40, 0.13);
+}
+
+
+/* ==============================
+   COMO SER VOLUNTÁRIO
+============================== */
+
+.section-como {
+    width: 100%;
+    padding: 85px 5%;
+    background-color: #ffffff;
+}
+
+.model-peo {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.model-peo h2 {
+    color: #164f30;
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.model-peo p {
+    color: #68756c;
+    font-size: 16px;
+}
+
+/* Agrupamento dos quatro cards */
+
+.model-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* Cada card individual */
+
+.model {
+    width: 100%;
+    min-height: 180px;
+    padding: 28px;
+    background-color: #f7faf7;
+    border: 1px solid #e5eee7;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.model:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(22, 79, 48, 0.09);
+}
+
+.model h3 {
+    color: #176b3a;
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.model p {
+    color: #68756c;
+    font-size: 15px;
+}
+
+
+/* ==============================
+   FORMULÁRIO DE INSCRIÇÃO
+============================== */
+
+.section-inscricao {
+    width: 100%;
+    padding: 85px 7%;
+    background-color: #f1f7f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.model-inscri {
+    flex: 1;
+    max-width: 480px;
+}
+
+.model-inscri h2 {
+    color: #164f30;
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.model-inscri p {
+    color: #68756c;
+    font-size: 16px;
+}
+
+/* Área do formulário */
+
+.section-inscricao > div:last-child {
+    width: 100%;
+    max-width: 550px;
+}
+
+.form-voluntario {
+    width: 100%;
+    padding: 35px;
+    background-color: #ffffff;
+    border: 1px solid #e5eee7;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(22, 79, 48, 0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.form-voluntario label {
+    color: #34443a;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-voluntario input,
+.form-voluntario select,
+.form-voluntario textarea {
+    width: 100%;
+    padding: 13px 15px;
+    color: #26352b;
+    background-color: #ffffff;
+    border: 1px solid #dce5de;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-voluntario input:focus,
+.form-voluntario select:focus,
+.form-voluntario textarea:focus {
+    border-color: #176b3a;
+    box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.10);
+}
+
+.form-voluntario input::placeholder,
+.form-voluntario textarea::placeholder {
+    color: #9aa59d;
+}
+
+.form-voluntario textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.mods {
+    width: 100%;
+    padding: 14px;
+    background-color: #176b3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mods:hover {
+    background-color: #104d29;
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   RODAPÉ
+============================== */
+
+.rodape {
+    width: 100%;
+    padding: 55px 5% 20px;
+    background-color: #164f30;
+    color: #ffffff;
+}
+
+.conteudo-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 45px;
+}
+
+.info-rodape h3,
+.links-rodape h3,
+.contato-rodape h3 {
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.info-rodape p,
+.contato-rodape p {
+    color: #d5e5d9;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.links-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.links-rodape a {
+    color: #d5e5d9;
+    font-size: 14px;
+    margin-bottom: 9px;
+    transition: color 0.3s ease;
+}
+
+.links-rodape a:hover {
+    color: #ffffff;
+}
+
+.direitos-rodape {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #d5e5d9;
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 1000px) {
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .volunt h1 {
+        font-size: 36px;
+    }
+
+    .section-inscricao {
+        gap: 35px;
+    }
+
+    .conteudo-rodape {
+        gap: 25px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    /* Cabeçalho */
+
+    .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 5%;
+    }
+
+    .main-nav {
+        width: 100%;
+        gap: 12px 18px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    /* Banner */
+
+    .section-volun {
+        padding: 45px 5%;
+    }
+
+    .volunt {
+        min-height: auto;
+        padding: 0;
+    }
+
+    .volunt h1 {
+        font-size: 31px;
+    }
+
+    .volunt p {
+        font-size: 15px;
+    }
+
+    .vonl {
+        position: static;
+        width: 100%;
+        height: 240px;
+        margin-top: 30px;
+        transform: none;
+    }
+
+    /* Cards */
+
+    .section-como {
+        padding: 60px 5%;
+    }
+
+    .model-peo {
+        margin-bottom: 30px;
+    }
+
+    .model-peo h2 {
+        font-size: 27px;
+    }
+
+    .model-container {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .model {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    /* Formulário */
+
+    .section-inscricao {
+        padding: 60px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 30px;
+    }
+
+    .model-inscri {
+        max-width: 100%;
+    }
+
+    .model-inscri h2 {
+        font-size: 27px;
+    }
+
+    .form-voluntario {
+        padding: 25px 20px;
+    }
+
+    /* Rodapé */
+
+    .conteudo-rodape {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .rodape {
+        padding: 45px 5% 20px;
+    }
+}
