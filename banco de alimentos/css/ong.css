@@ -1,834 +1,829 @@
 
-/* ========================================
-   BANCO DE ALIMENTOS — PÁGINA A ONG
-   ======================================== */
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
 
-/* Configurações gerais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'DM Sans', sans-serif;
-    color: #34443b;
-    background: #ffffff;
-    line-height: 1.6;
+:root {
+    --verde-principal: #176b3a;
+    --verde-escuro: #164f30;
+    --verde-claro: #eaf5ed;
+    --verde-suave: #f4f9f5;
+    --texto: #26352b;
+    --texto-secundario: #68756c;
+    --branco: #ffffff;
+    --borda: #e4ece6;
 }
 
-h1, h2, h3 {
-    font-family: 'Manrope', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--texto);
+    background-color: var(--branco);
+    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-}
 
-/* ========================================
-   CABEÇALHO
-   ======================================== */
+/* =========================================
+   2. CABEÇALHO
+========================================= */
 
 .site-header {
     width: 100%;
-    background: #ffffff;
-    padding: 15px 6%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-    position: relative;
-    z-index: 10;
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
 }
 
 .site-header .container {
-    max-width: 1400px;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 85px;
     margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 30px;
 }
 
 .logo {
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.logo .titulo {
-    font-size: 19px;
-    line-height: 1.3;
-    color: #14532d;
+.titulo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
     font-weight: 800;
+    color: var(--verde-escuro);
+    line-height: 1.3;
 }
 
-.logo .p {
-    color: #287747;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+.p {
+    color: var(--texto-secundario);
+    font-size: 13px;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    gap: 25px;
+    gap: 24px;
 }
 
 .main-nav a {
-    color: #34443b;
-    font-size: 12px;
-    white-space: nowrap;
-    transition: color 0.3s;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-.main-nav a:hover,
-.main-nav a[href="ong"] {
-    color: #176b3a;
-}
-
-.main-nav a[href="ong"] {
-    border-bottom: 2px solid #176b3a;
-    padding-bottom: 8px;
+.main-nav a:hover {
+    color: var(--verde-principal);
 }
 
 .main-nav button {
+    background-color: var(--verde-principal);
+    color: var(--branco);
     border: none;
-    border-radius: 25px;
-    padding: 10px 22px;
-    margin-left: 10px;
-    background: #126534;
-    color: #ffffff;
-    font-family: inherit;
+    border-radius: 8px;
+    padding: 11px 23px;
+    font-size: 14px;
     font-weight: 700;
-    font-size: 12px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s ease;
 }
 
 .main-nav button:hover {
-    background: #0d4825;
+    background-color: var(--verde-escuro);
 }
 
-/* ========================================
-   SEÇÃO 1 — BANNER A ONG
-   ======================================== */
+
+/* =========================================
+   3. BANNER PRINCIPAL DA ONG
+========================================= */
 
 .section-ong {
     width: 100%;
-    min-height: 245px;
-    padding: 35px 7%;
-    display: flex;
-    align-items: center;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(12, 83, 47, 0.98) 0%,
-            rgba(12, 83, 47, 0.85) 32%,
-            rgba(12, 83, 47, 0.12) 100%
-        ),
-        url("../assets/images/cesta.jpg") center 48% / cover no-repeat;
-    color: #ffffff;
+    padding: 65px 5%;
+    background: linear-gradient(
+        110deg,
+        #eaf5ed,
+        #f5faf6,
+        #dcefe1
+    );
 }
 
 .inicio {
-    width: 100%;
-    max-width: 1400px;
+    max-width: 1200px;
+    min-height: 340px;
     margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr;
+    align-items: center;
+    column-gap: 55px;
 }
 
-.inicio p:first-child,
-.inicio p:nth-child(2) {
-    display: inline;
-    color: #ffffff;
-    font-size: 12px;
-    margin-right: 7px;
+.inicio > p:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    color: var(--texto-secundario);
+    font-size: 13px;
 }
 
-.inicio h1 {
-    font-size: 40px;
-    line-height: 1.2;
-    font-weight: 800;
-    color: #ffffff;
-    margin: 14px 0 6px;
-}
-
-#text-transf {
-    max-width: 360px;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.4;
-}
-
-.image-doacao {
+.inicio > p:nth-child(2) {
     display: none;
 }
 
-/* ========================================
-   SEÇÃO 2 — NOSSA HISTÓRIA
-   ======================================== */
+.inicio h1 {
+    grid-column: 1;
+    grid-row: 2;
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    margin: 10px 0;
+}
+
+#text-transf {
+    grid-column: 1;
+    grid-row: 3;
+    align-self: start;
+    color: var(--verde-principal);
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.image-doacao {
+    grid-column: 2;
+    grid-row: 1 / 4;
+
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+
+    box-shadow: 0 12px 30px rgba(22, 79, 48, 0.13);
+}
+
+
+/* =========================================
+   4. SEÇÃO NOSSA HISTÓRIA
+========================================= */
 
 .section-sobreNos {
-    padding: 40px 7%;
-    background: #ffffff;
+    width: 100%;
+    padding: 85px 5%;
+    background-color: var(--branco);
 }
 
 .sobre {
-    max-width: 1400px;
+    max-width: 1200px;
+    min-height: 380px;
     margin: 0 auto;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
-    column-gap: 35px;
+    grid-template-rows: auto auto 1fr auto;
     align-items: center;
-}
-
-.sobre .alimentos {
-    grid-column: 1;
-    grid-row: 1 / 4;
-    width: 100%;
-    height: 255px;
-    object-fit: cover;
-    border-radius: 10px;
+    column-gap: 60px;
 }
 
 .sobre h6 {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 1;
-    align-self: end;
-    color: #176b3a;
-    font-size: 11px;
-    letter-spacing: 0.5px;
-    margin-bottom: 2px;
+    color: var(--verde-principal);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
 .sobre h1 {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 2;
-    align-self: start;
-    color: #164f30;
-    font-size: 27px;
-    line-height: 1.3;
-    margin-bottom: 8px;
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    margin-bottom: 18px;
 }
 
 #historia {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 3;
-    align-self: start;
-    color: #53615a;
-    font-size: 13px;
-    line-height: 1.65;
-    margin-bottom: 18px;
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 22px;
 }
 
 .sobre a {
-    grid-column: 2;
+    grid-column: 1;
     grid-row: 4;
     justify-self: start;
+
     display: inline-block;
-    background: #126534;
-    color: #ffffff;
-    padding: 10px 19px;
-    border-radius: 25px;
-    font-size: 11px;
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 12px 22px;
+    border-radius: 8px;
+
+    font-size: 14px;
     font-weight: 700;
-    transition: background 0.3s;
+    transition: 0.3s ease;
 }
 
-.sobre a:hover,
-.resultados:hover,
-.fut:hover {
-    background: #0d4825;
+.sobre a:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
 }
 
-/* ========================================
-   SEÇÃO 3 — MISSÃO, VISÃO E VALORES
-   ======================================== */
+.alimentos {
+    grid-column: 2;
+    grid-row: 1 / 5;
+
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(22, 79, 48, 0.10);
+}
+
+
+/* =========================================
+   5. SEÇÃO MISSÃO, VISÃO E VALORES
+========================================= */
 
 .section-valores {
     width: 100%;
-    padding: 30px 7%;
-    background: #f0f8f1;
-    border-radius: 9px;
+    padding: 75px 5%;
+    background-color: var(--verde-suave);
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+    gap: 22px;
 }
 
-.section-valores > div {
-    max-width: 420px;
+.missao,
+.visao,
+.valores {
     width: 100%;
-    padding: 15px 20px;
-    position: relative;
-}
-
-.section-valores > div + div {
-    border-left: 1px solid #d3e5d6;
-    padding-left: 35px;
-}
-
-.section-valores h3 {
-    color: #176b3a;
-    font-size: 18px;
-    margin-bottom: 8px;
-}
-
-.section-valores p,
-.lista-valor {
-    color: #526158;
-    font-size: 13px;
-    line-height: 1.65;
-}
-
-.lista-valor {
-    padding-left: 18px;
-}
-
-.lista-valor li::marker {
-    color: #176b3a;
-}
-
-
-/* ========================================
-   SEÇÃO 4 — NOSSO IMPACTO
-   ======================================== */
-
-.nosso-impacto {
-    width: 100%;
-    max-width: 1600px;
+    max-width: 370px;
+    min-height: 220px;
     margin: 0 auto;
-    padding: 45px 7%;
-    box-sizing: border-box;
+    padding: 30px;
 
-    display: grid;
-    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.8fr);
-    gap: 25px 35px;
-    align-items: center;
-}
-
-/* Texto de apresentação */
-.nosso-impacto > div:first-child {
-    grid-column: 1;
-    grid-row: 1;
-    min-width: 0;
-}
-
-.nosso-impacto h6 {
-    color: #176b3a;
-    font-size: 11px;
-    margin-bottom: 4px;
-}
-
-.nosso-impacto h1 {
-    color: #164f30;
-    font-size: 25px;
-    line-height: 1.2;
-    margin-bottom: 12px;
-}
-
-.nosso-impacto > div:first-child p {
-    color: #53615a;
-    font-size: 13px;
-    line-height: 1.65;
-    margin-bottom: 18px;
-}
-
-/* Botão de resultados */
-.resultados {
-    grid-column: 1;
-    grid-row: 2;
-    justify-self: start;
-
-    display: inline-block;
-    padding: 10px 18px;
-    border-radius: 25px;
-    background: #126534;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: 700;
-}
-
-/* Quatro cartões de dados */
-.dado {
-    min-width: 0;
-    width: 100%;
-    min-height: 145px;
-    padding: 15px 5px;
-    box-sizing: border-box;
-
-    border-radius: 10px;
-    background: #f0f8f3;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 15px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
+    transition: 0.3s ease;
 }
 
-/* Remove os posicionamentos antigos */
-.dado:nth-of-type(n) {
-    grid-row: auto;
-    transform: none;
+.missao:hover,
+.visao:hover,
+.valores:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(22, 79, 48, 0.08);
 }
 
-/* Posiciona os cartões em uma grade de 4 colunas */
-.nosso-impacto > .dado:nth-of-type(2) {
-    grid-column: 2;
-    grid-row: 1;
+.missao h3,
+.visao h3,
+.valores h3 {
+    color: var(--verde-principal);
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 15px;
 }
 
-.nosso-impacto > .dado:nth-of-type(3) {
-    grid-column: 2;
-    grid-row: 1;
-    margin-left: 0;
+.missao p,
+.visao p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.8;
 }
 
-.nosso-impacto > .dado:nth-of-type(4) {
-    grid-column: 2;
-    grid-row: 1;
-    margin-left: 0;
+.lista-valor {
+    list-style: none;
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 2;
 }
 
-.nosso-impacto > .dado:nth-of-type(5) {
-    grid-column: 2;
-    grid-row: 1;
-    margin-left: 0;
-}
 
-/* Organiza os quatro cartões juntos */
+/* =========================================
+   6. SEÇÃO NOSSO IMPACTO
+========================================= */
+
 .nosso-impacto {
-    grid-template-columns: minmax(0, 0.9fr) repeat(4, minmax(0, 1fr));
+    width: 100%;
+    padding: 80px 5%;
+    background-color: var(--branco);
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: stretch;
 }
 
-/* Texto ocupa a primeira coluna */
 .nosso-impacto > div:first-child {
-    grid-column: 1;
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-/* Botão fica abaixo do texto */
-.nosso-impacto > .resultados {
-    grid-column: 1;
+.nosso-impacto h6 {
+    color: var(--verde-principal);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
 }
 
-/* Cartões ficam nas quatro colunas seguintes */
-.nosso-impacto > .dado:nth-of-type(2) {
-    grid-column: 2;
+.nosso-impacto h1 {
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 15px;
 }
 
-.nosso-impacto > .dado:nth-of-type(3) {
-    grid-column: 3;
+.nosso-impacto > div:first-child p {
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-.nosso-impacto > .dado:nth-of-type(4) {
-    grid-column: 4;
+.resultados {
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    display: inline-block;
+    padding: 12px 22px;
+    margin-bottom: 15px;
+
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
 }
 
-.nosso-impacto > .dado:nth-of-type(5) {
-    grid-column: 5;
+.resultados:hover {
+    background-color: var(--verde-escuro);
 }
 
-.dado h3 {
+.nosso-impacto .dado {
+    padding: 28px 15px;
+    background-color: var(--verde-suave);
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.nosso-impacto .dado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(22, 79, 48, 0.08);
+}
+
+.nosso-impacto .dado h3 {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 7px;
+    justify-content: center;
+    gap: 9px;
 
-    color: #164f30;
-    font-size: 21px;
-    line-height: 1.3;
-    margin-bottom: 4px;
+    color: var(--verde-principal);
+    font-family: 'Manrope', sans-serif;
+    font-size: 29px;
+    font-weight: 800;
+    margin-bottom: 8px;
 }
 
-.dado svg {
-    width: 27px;
-    height: 27px;
+.nosso-impacto .dado h3 svg {
+    width: 25px;
+    height: 25px;
     flex-shrink: 0;
 }
 
-.dado p {
-    color: #53615a;
-    font-size: 10px;
-    line-height: 1.5;
-}
-
-/* Tablets */
-@media (max-width: 1050px) {
-    .nosso-impacto {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px;
-    }
-
-    .nosso-impacto > div:first-child,
-    .nosso-impacto > .resultados {
-        grid-column: 1 / -1;
-    }
-
-    .nosso-impacto > .dado:nth-of-type(n) {
-        grid-row: auto;
-        grid-column: auto;
-        transform: none;
-    }
-}
-
-/* Celulares */
-@media (max-width: 650px) {
-    .nosso-impacto {
-        padding: 35px 6%;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .nosso-impacto > div:first-child,
-    .nosso-impacto > .resultados {
-        grid-column: 1 / -1;
-    }
-
-    .dado {
-        min-height: 130px;
-    }
-
-    .dado h3 {
-        font-size: 19px;
-    }
+.nosso-impacto .dado p {
+    color: var(--texto-secundario);
+    font-size: 13px;
 }
 
 
-/* ========================================
-   SEÇÃO 5 — NOSSA EQUIPE
-   ======================================== */
+/* =========================================
+   7. SEÇÃO NOSSA EQUIPE / FUTURO
+========================================= */
 
 .section-futuro {
     width: 100%;
-    padding: 35px 7%;
-    background: #f0f8f1;
+    max-width: 100%;
+    padding: 75px 5%;
+    background: linear-gradient(
+        110deg,
+        #eaf5ed,
+        #f5faf6
+    );
+
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     align-items: center;
-    column-gap: 45px;
-    row-gap: 15px;
+    gap: 20px 55px;
 }
 
 .futuro {
     grid-column: 1;
     grid-row: 1;
+    max-width: 550px;
+    justify-self: end;
+}
+
+.futuro h6 {
+    color: var(--verde-principal);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
 }
 
 .futuro h1 {
-    color: #164f30;
-    font-size: 25px;
-    line-height: 1.25;
-    margin-bottom: 10px;
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 18px;
 }
 
 .futuro p {
-    color: #53615a;
-    font-size: 13px;
-    line-height: 1.65;
+    color: var(--texto-secundario);
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 .fut {
     grid-column: 1;
     grid-row: 2;
-    justify-self: start;
+    justify-self: end;
+
     display: inline-block;
-    background: #126534;
-    color: #ffffff;
-    border-radius: 25px;
-    padding: 10px 18px;
-    font-size: 11px;
+    padding: 12px 22px;
+    margin-top: 5px;
+
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    border-radius: 8px;
+
+    font-size: 14px;
     font-weight: 700;
-    transition: background 0.3s;
+    transition: 0.3s ease;
+}
+
+.fut:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
 }
 
 .equipe {
     grid-column: 2;
     grid-row: 1 / 3;
+
     width: 100%;
-    height: 210px;
+    max-width: 550px;
+    height: 320px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 17px;
+    box-shadow: 0 12px 30px rgba(22, 79, 48, 0.12);
 }
 
-/* ========================================
-   RODAPÉ
-   ======================================== */
+
+/* =========================================
+   8. RODAPÉ
+========================================= */
 
 .rodape {
-    padding: 30px 7% 15px;
-    color: #ffffff;
-    background: linear-gradient(110deg, #0c482b, #125c35);
+    width: 100%;
+    padding: 55px 5% 20px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
 }
 
 .conteudo-rodape {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: 45px;
-    padding-bottom: 25px;
 }
 
 .info-rodape h2 {
-    font-size: 17px;
-    margin-bottom: 2px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 5px;
 }
 
-.info-rodape p:first-of-type {
-    text-transform: uppercase;
-    font-size: 9px;
-    letter-spacing: 1px;
-    margin-bottom: 12px;
-}
-
-.info-rodape p:last-of-type {
-    max-width: 350px;
-    font-size: 12px;
-    color: #d5e6da;
-    line-height: 1.6;
+.info-rodape p {
+    color: #d5e5d9;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 10px;
 }
 
 .links-rodape {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 7px;
 }
 
 .links-rodape h3 {
-    font-size: 13px;
-    margin-bottom: 5px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
 }
 
 .links-rodape a {
-    color: #e2eee5;
-    font-size: 12px;
-    transition: color 0.3s;
+    color: #d5e5d9;
+    font-size: 14px;
+    margin-bottom: 9px;
+    transition: 0.3s ease;
 }
 
 .links-rodape a:hover {
-    color: #a8e6b9;
+    color: var(--branco);
+    padding-left: 4px;
 }
 
 .direitos-rodape {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 1200px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
 .direitos-rodape p {
-    color: #d5e6da;
-    font-size: 10px;
+    color: #d5e5d9;
+    font-size: 13px;
 }
 
-/* ========================================
-   RESPONSIVIDADE — TABLETS
-   ======================================== */
 
-@media (max-width: 1050px) {
+/* =========================================
+   9. RESPONSIVIDADE - TABLETS
+========================================= */
+
+@media (max-width: 1000px) {
+
     .site-header .container {
         flex-direction: column;
+        padding: 18px 0;
         gap: 15px;
     }
 
     .main-nav {
-        justify-content: center;
         flex-wrap: wrap;
-        gap: 15px;
+        justify-content: center;
+        gap: 15px 20px;
     }
 
-    .nosso-impacto {
-        grid-template-columns: 1fr;
+    .section-valores {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .nosso-impacto > div:first-child,
-    .resultados {
-        grid-column: 1;
-        grid-row: auto;
-    }
-
-    .dado:nth-of-type(n+2) {
-        grid-column: auto;
-        grid-row: auto;
-        transform: none;
-    }
-
-    .nosso-impacto {
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .nosso-impacto > div:first-child,
-    .resultados {
+    .valores {
         grid-column: 1 / -1;
     }
 
-    .dado {
-        grid-row: auto !important;
-        grid-column: auto !important;
+    .nosso-impacto {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .inicio {
+        column-gap: 30px;
+    }
+
+    .inicio h1 {
+        font-size: 39px;
+    }
+
+    .sobre {
+        column-gap: 30px;
+    }
+
+    .sobre h1 {
+        font-size: 30px;
+    }
+
+    .section-futuro {
+        gap: 25px;
+    }
+
+    .futuro h1 {
+        font-size: 29px;
     }
 }
 
-/* ========================================
-   RESPONSIVIDADE — CELULARES
-   ======================================== */
 
-@media (max-width: 650px) {
-    .site-header {
-        padding: 18px 5%;
-    }
+/* =========================================
+   10. RESPONSIVIDADE - CELULARES
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* Cabeçalho */
 
     .site-header .container {
         align-items: flex-start;
     }
 
+    .titulo {
+        font-size: 20px;
+    }
+
     .main-nav {
-        width: 100%;
         justify-content: flex-start;
         gap: 12px 16px;
     }
 
     .main-nav a {
-        font-size: 12px;
-    }
-
-    .main-nav button {
-        margin-left: 0;
-    }
-
-    .section-ong {
-        min-height: 230px;
-        padding: 30px 6%;
-        background-position: center;
-    }
-
-    .inicio h1 {
-        font-size: 34px;
-    }
-
-    #text-transf {
-        max-width: 290px;
-        font-size: 18px;
-    }
-
-    .section-sobreNos {
-        padding: 30px 6%;
-    }
-
-    .sobre {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-    }
-
-    .sobre .alimentos {
-        order: 0;
-        height: 220px;
-        margin-bottom: 12px;
-    }
-
-    .sobre h6 {
-        order: 1;
-    }
-
-    .sobre h1 {
-        order: 2;
-        font-size: 25px;
-    }
-
-    #historia {
-        order: 3;
         font-size: 13px;
     }
 
-    .sobre a {
-        order: 4;
-        margin-bottom: 5px;
+    /* Banner */
+
+    .section-ong {
+        padding: 45px 5%;
     }
+
+    .inicio {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 12px;
+    }
+
+    .inicio > p:first-child,
+    .inicio h1,
+    #text-transf,
+    .image-doacao {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .inicio h1 {
+        font-size: 36px;
+    }
+
+    .image-doacao {
+        height: 240px;
+        margin-top: 15px;
+    }
+
+    /* História */
+
+    .section-sobreNos {
+        padding: 55px 5%;
+    }
+
+    .sobre {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 15px;
+    }
+
+    .sobre h6,
+    .sobre h1,
+    #historia,
+    .sobre a,
+    .alimentos {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .sobre h1 {
+        font-size: 29px;
+    }
+
+    #historia {
+        font-size: 14px;
+    }
+
+    .alimentos {
+        height: 240px;
+        margin-top: 15px;
+    }
+
+    /* Missão, visão e valores */
 
     .section-valores {
+        padding: 55px 5%;
         grid-template-columns: 1fr;
-        gap: 12px;
-        padding: 25px 6%;
+        gap: 16px;
     }
 
-    .section-valores > div {
-        max-width: none;
-        padding: 15px 10px;
+    .missao,
+    .visao,
+    .valores {
+        max-width: 100%;
+        min-height: 190px;
+        grid-column: auto;
     }
 
-    .section-valores > div + div {
-        border-left: none;
-        border-top: 1px solid #d3e5d6;
-        padding: 20px 10px 10px;
-    }
+    /* Impacto */
 
     .nosso-impacto {
-        padding: 35px 6%;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
-    }
-
-    .nosso-impacto > div:first-child,
-    .resultados {
-        grid-column: 1 / -1;
+        padding: 55px 5%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 13px;
     }
 
     .nosso-impacto h1 {
-        font-size: 25px;
+        font-size: 27px;
     }
 
-    .dado {
-        min-height: 130px;
-        padding: 12px 5px;
+    .nosso-impacto .dado {
+        padding: 20px 10px;
     }
 
-    .dado h3 {
-        font-size: 19px;
+    .nosso-impacto .dado h3 {
+        font-size: 23px;
+        gap: 5px;
     }
+
+    .nosso-impacto .dado h3 svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Equipe */
 
     .section-futuro {
-        padding: 30px 6%;
+        padding: 55px 5%;
         grid-template-columns: 1fr;
-        gap: 15px;
+        grid-template-rows: auto;
+        gap: 20px;
     }
 
     .futuro,
     .fut,
     .equipe {
         grid-column: 1;
-    }
-
-    .futuro {
-        grid-row: 1;
-    }
-
-    .fut {
-        grid-row: 2;
-    }
-
-    .equipe {
-        grid-row: 3;
-        height: 220px;
-        margin-top: 5px;
+        grid-row: auto;
+        justify-self: stretch;
     }
 
     .futuro h1 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
+    .equipe {
+        height: 240px;
+        margin-top: 10px;
+    }
+
+    .fut {
+        justify-self: start;
+    }
+
+    /* Rodapé */
+
     .rodape {
-        padding: 30px 6% 15px;
+        padding: 45px 5% 20px;
     }
 
     .conteudo-rodape {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
+    }
+
+    .direitos-rodape {
+        margin-top: 30px;
     }
 }

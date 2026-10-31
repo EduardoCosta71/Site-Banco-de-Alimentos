@@ -1,7 +1,7 @@
 
-/* ==============================
+/* =================================
    CONFIGURAÇÕES GERAIS
-============================== */
+================================= */
 
 * {
     margin: 0;
@@ -11,382 +11,385 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background-color: #ffffff;
-    color: #26352b;
-    line-height: 1.6;
+    background: #f4f9f5;
+    color: #596b5e;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-button,
-input,
-select,
-textarea {
-    font: inherit;
-}
-
-
-/* ==============================
+/* =================================
    CABEÇALHO
-============================== */
+================================= */
 
 .site-header {
-    width: 100%;
-    background-color: #ffffff;
-    padding: 18px 5%;
+    background: #ffffff;
+    padding: 18px 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.site-header .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 25px;
-    border-bottom: 1px solid #edf1ed;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.titulo {
+.logo .titulo {
     color: #176b3a;
-    font-family: 'Manrope', sans-serif;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 800;
 }
 
-.p {
-    color: #68756c;
-    font-size: 13px;
+.logo .p {
+    color: #596b5e;
+    font-size: 14px;
+    margin-top: 3px;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 23px;
 }
 
 .main-nav a {
-    color: #34443a;
+    color: #26352b;
+    text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 .main-nav a:hover {
     color: #176b3a;
 }
 
+.main-nav button {
+    background: #176b3a;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 22px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
 
-/* ==============================
-   SEÇÃO PRINCIPAL / BANNER
-============================== */
+.main-nav button:hover {
+    background: #164f30;
+}
+
+/* =================================
+   SEÇÃO 1 - VOLUNTARIADO
+================================= */
 
 .section-volun {
-    width: 100%;
-    background: linear-gradient(120deg, #eaf5ed, #f7faf7);
-    padding: 75px 5%;
+    background: #eaf5ed;
+    padding: 60px 8%;
 }
 
 .volunt {
-    position: relative;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 45px;
     max-width: 1200px;
-    min-height: 340px;
-    margin: 0 auto;
-    padding: 30px 50% 30px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    margin: auto;
 }
 
 .volunt h6 {
+    grid-column: 1;
     color: #176b3a;
     font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
 }
 
 .volunt h1 {
-    max-width: 550px;
+    grid-column: 1;
     color: #164f30;
-    font-family: 'Manrope', sans-serif;
-    font-size: 43px;
+    font-size: 36px;
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    line-height: 1.25;
 }
 
 .volunt p {
-    max-width: 520px;
-    color: #58675d;
-    font-size: 16px;
-    margin-bottom: 25px;
+    grid-column: 1;
+    color: #596b5e;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 .volunt a {
-    display: inline-block;
-    background-color: #176b3a;
+    grid-column: 1;
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #176b3a;
     color: #ffffff;
-    padding: 13px 26px;
+    text-decoration: none;
+    padding: 13px 21px;
     border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
-    transition: 0.3s ease;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
 .volunt a:hover {
-    background-color: #104d29;
+    background: #164f30;
     transform: translateY(-2px);
 }
 
-.vonl {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 12px 30px rgba(20, 70, 40, 0.13);
+.volunt a svg {
+    width: 21px;
+    height: 21px;
 }
 
+.vonl {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 15px;
+}
 
-/* ==============================
-   COMO SER VOLUNTÁRIO
-============================== */
+/* =================================
+   SEÇÃO 2 - COMO SER VOLUNTÁRIO
+================================= */
 
 .section-como {
-    width: 100%;
-    padding: 85px 5%;
-    background-color: #ffffff;
+    padding: 75px 8%;
+    background: #ffffff;
 }
-
-.model-peo {
-    max-width: 750px;
-    margin: 0 auto 45px;
-    text-align: center;
-}
-
-.model-peo h2 {
-    color: #164f30;
-    font-family: 'Manrope', sans-serif;
-    font-size: 32px;
-    font-weight: 800;
-    margin-bottom: 15px;
-}
-
-.model-peo p {
-    color: #68756c;
-    font-size: 16px;
-}
-
-/* Agrupamento dos quatro cards */
 
 .model-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
+    max-width: 1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 22px;
 }
 
-/* Cada card individual */
-
-.model {
-    width: 100%;
-    min-height: 180px;
-    padding: 28px;
-    background-color: #f7faf7;
-    border: 1px solid #e5eee7;
-    border-radius: 14px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.model-peo {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-bottom: 18px;
 }
 
-.model:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(22, 79, 48, 0.09);
-}
-
-.model h3 {
-    color: #176b3a;
-    font-family: 'Manrope', sans-serif;
-    font-size: 19px;
+.model-peo h1 {
+    color: #164f30;
+    font-size: 32px;
     font-weight: 800;
     margin-bottom: 12px;
 }
 
-.model p {
-    color: #68756c;
+.model-peo p {
+    color: #596b5e;
     font-size: 15px;
+    line-height: 1.7;
 }
 
+.model {
+    background: #f4f9f5;
+    border: 1px solid #e4eee6;
+    border-radius: 12px;
+    padding: 30px 18px;
+    text-align: center;
+    transition: 0.3s;
+}
 
-/* ==============================
-   FORMULÁRIO DE INSCRIÇÃO
-============================== */
+.model:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(23, 107, 58, 0.1);
+}
+
+.model svg {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 17px;
+}
+
+.model h3 {
+    color: #164f30;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.model p {
+    color: #596b5e;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =================================
+   SEÇÃO 3 - FORMULÁRIO
+================================= */
 
 .section-inscricao {
-    width: 100%;
-    padding: 85px 7%;
-    background-color: #f1f7f2;
-    display: flex;
+    background: #eaf5ed;
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    justify-content: space-between;
-    gap: 60px;
+    gap: 50px;
 }
 
 .model-inscri {
-    flex: 1;
-    max-width: 480px;
+    max-width: 500px;
 }
 
-.model-inscri h2 {
+#mdl {
+    color: #176b3a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+#mdo {
     color: #164f30;
-    font-family: 'Manrope', sans-serif;
     font-size: 32px;
     font-weight: 800;
     margin-bottom: 18px;
 }
 
 .model-inscri p {
-    color: #68756c;
-    font-size: 16px;
-}
-
-/* Área do formulário */
-
-.section-inscricao > div:last-child {
-    width: 100%;
-    max-width: 550px;
+    color: #596b5e;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 .form-voluntario {
-    width: 100%;
-    padding: 35px;
-    background-color: #ffffff;
-    border: 1px solid #e5eee7;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(22, 79, 48, 0.07);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    gap: 17px;
+    gap: 13px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .form-voluntario label {
-    color: #34443a;
+    color: #164f30;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .form-voluntario input,
-.form-voluntario select,
-.form-voluntario textarea {
+.form-voluntario select {
     width: 100%;
-    padding: 13px 15px;
-    color: #26352b;
-    background-color: #ffffff;
-    border: 1px solid #dce5de;
+    padding: 13px;
+    border: 1px solid #dce6de;
     border-radius: 8px;
+    background: #fbfdfb;
+    color: #26352b;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
     outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
 }
 
 .form-voluntario input:focus,
-.form-voluntario select:focus,
-.form-voluntario textarea:focus {
+.form-voluntario select:focus {
     border-color: #176b3a;
-    box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.10);
-}
-
-.form-voluntario input::placeholder,
-.form-voluntario textarea::placeholder {
-    color: #9aa59d;
-}
-
-.form-voluntario textarea {
-    min-height: 110px;
-    resize: vertical;
+    box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.08);
 }
 
 .mods {
-    width: 100%;
-    padding: 14px;
-    background-color: #176b3a;
+    background: #176b3a;
     color: #ffffff;
     border: none;
     border-radius: 8px;
-    font-size: 15px;
-    font-weight: 700;
+    padding: 13px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: 0.3s;
 }
 
 .mods:hover {
-    background-color: #104d29;
-    transform: translateY(-2px);
+    background: #164f30;
 }
 
+.mods svg {
+    width: 21px;
+    height: 21px;
+}
 
-/* ==============================
+/* =================================
    RODAPÉ
-============================== */
+================================= */
 
 .rodape {
-    width: 100%;
-    padding: 55px 5% 20px;
-    background-color: #164f30;
+    background: #164f30;
     color: #ffffff;
+    padding: 50px 8% 20px;
 }
 
 .conteudo-rodape {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: auto;
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1.5fr;
     gap: 45px;
+    padding-bottom: 30px;
 }
 
-.info-rodape h3,
-.links-rodape h3,
-.contato-rodape h3 {
-    color: #ffffff;
+.info-rodape h2 {
     font-family: 'Manrope', sans-serif;
-    font-size: 18px;
-    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
 }
 
 .info-rodape p,
 .contato-rodape p {
     color: #d5e5d9;
     font-size: 14px;
+    line-height: 1.8;
     margin-bottom: 10px;
 }
 
-.links-rodape {
+.info-rodape p:last-child {
+    max-width: 430px;
+}
+
+.links-rodape,
+.contato-rodape {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    gap: 12px;
+}
+
+.links-rodape h3,
+.contato-rodape h3 {
+    font-size: 17px;
+    margin-bottom: 5px;
 }
 
 .links-rodape a {
     color: #d5e5d9;
+    text-decoration: none;
     font-size: 14px;
-    margin-bottom: 9px;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 .links-rodape a:hover {
@@ -394,144 +397,113 @@ textarea {
 }
 
 .direitos-rodape {
-    max-width: 1200px;
-    margin: 40px auto 0;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    color: #d5e5d9;
-    font-size: 13px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 18px;
     text-align: center;
 }
 
+.direitos-rodape p {
+    color: #d5e5d9;
+    font-size: 13px;
+}
 
-/* ==============================
+/* =================================
    RESPONSIVIDADE
-============================== */
+================================= */
 
 @media (max-width: 1000px) {
 
-    .site-header {
-        flex-wrap: wrap;
+    .site-header .container {
+        flex-direction: column;
     }
 
     .main-nav {
+        justify-content: center;
         flex-wrap: wrap;
         gap: 15px;
     }
 
-    .volunt h1 {
-        font-size: 36px;
+    .model-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .section-inscricao {
-        gap: 35px;
+        gap: 30px;
     }
 
     .conteudo-rodape {
-        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
+@media (max-width: 650px) {
 
-@media (max-width: 700px) {
-
-    /* Cabeçalho */
-
-    .site-header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 18px 5%;
+    .site-header .container {
+        width: 95%;
     }
 
     .main-nav {
-        width: 100%;
-        gap: 12px 18px;
+        gap: 12px;
     }
 
     .main-nav a {
-        font-size: 13px;
+        font-size: 12px;
     }
 
-    /* Banner */
-
     .section-volun {
-        padding: 45px 5%;
+        padding: 45px 6%;
     }
 
     .volunt {
-        min-height: auto;
-        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
     }
 
     .volunt h1 {
-        font-size: 31px;
+        font-size: 29px;
     }
 
-    .volunt p {
-        font-size: 15px;
+    .volunt p br,
+    .model p br,
+    .model-inscri p br {
+        display: none;
     }
 
     .vonl {
-        position: static;
         width: 100%;
-        height: 240px;
-        margin-top: 30px;
-        transform: none;
+        height: 250px;
     }
-
-    /* Cards */
 
     .section-como {
-        padding: 60px 5%;
-    }
-
-    .model-peo {
-        margin-bottom: 30px;
-    }
-
-    .model-peo h2 {
-        font-size: 27px;
+        padding: 55px 6%;
     }
 
     .model-container {
         grid-template-columns: 1fr;
-        gap: 16px;
     }
 
-    .model {
-        min-height: auto;
-        padding: 24px;
+    .model-peo h1 {
+        font-size: 27px;
     }
-
-    /* Formulário */
 
     .section-inscricao {
-        padding: 60px 5%;
-        flex-direction: column;
-        align-items: stretch;
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
         gap: 30px;
     }
 
-    .model-inscri {
-        max-width: 100%;
-    }
-
-    .model-inscri h2 {
+    #mdo {
         font-size: 27px;
     }
 
     .form-voluntario {
-        padding: 25px 20px;
+        padding: 23px;
     }
-
-    /* Rodapé */
 
     .conteudo-rodape {
         grid-template-columns: 1fr;
         gap: 30px;
-    }
-
-    .rodape {
-        padding: 45px 5% 20px;
     }
 }

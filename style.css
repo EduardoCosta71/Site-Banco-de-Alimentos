@@ -1,7 +1,7 @@
 
-/* ========================================
-   BANCO DE ALIMENTOS — PÁGINA INICIAL
-   ======================================== */
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
 
 * {
     margin: 0;
@@ -9,433 +9,475 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'DM Sans', sans-serif;
-    color: #34443b;
-    background: #ffffff;
-    line-height: 1.6;
+:root {
+    --verde-principal: #176b3a;
+    --verde-escuro: #164f30;
+    --verde-claro: #eaf5ed;
+    --verde-suave: #f4f9f5;
+    --texto: #26352b;
+    --texto-secundario: #68756c;
+    --branco: #ffffff;
+    --borda: #e4ece6;
 }
 
-h1, h2, h3 {
-    font-family: 'Manrope', sans-serif;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--texto);
+    background-color: var(--branco);
+    line-height: 1.6;
 }
 
 a {
     text-decoration: none;
 }
 
-img {
-    display: block;
-    max-width: 100%;
+button {
+    font-family: inherit;
 }
 
-/* ========================================
-   CABEÇALHO
-   ======================================== */
+
+/* =========================================
+   2. CABEÇALHO
+========================================= */
 
 .site-header {
     width: 100%;
-    padding: 15px 6%;
-    background: #ffffff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    background-color: var(--branco);
+    border-bottom: 1px solid var(--borda);
     position: relative;
     z-index: 10;
 }
 
 .site-header .container {
-    max-width: 1400px;
+    width: 90%;
+    max-width: 1200px;
+    min-height: 85px;
     margin: 0 auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 25px;
+    gap: 30px;
 }
 
 .logo {
-    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.logo .titulo {
-    color: #14532d;
-    font-size: 19px;
-    line-height: 1.3;
+.titulo {
+    font-family: 'Manrope', sans-serif;
+    font-size: 23px;
     font-weight: 800;
+    color: var(--verde-escuro);
+    line-height: 1.3;
 }
 
-.logo .p {
-    color: #287747;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
+.p {
+    color: var(--texto-secundario);
+    font-size: 13px;
 }
 
 .main-nav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 24px;
 }
 
 .main-nav a {
-    color: #34443b;
-    font-size: 12px;
-    white-space: nowrap;
-    transition: color 0.3s;
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
 .main-nav a:hover {
-    color: #176b3a;
+    color: var(--verde-principal);
 }
 
 .main-nav button {
+    background-color: var(--verde-principal);
+    color: var(--branco);
     border: none;
-    border-radius: 25px;
-    padding: 10px 22px;
-    margin-left: 8px;
-    background: #126534;
-    color: #ffffff;
-    font-family: inherit;
-    font-size: 12px;
+    border-radius: 8px;
+    padding: 11px 23px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: 0.3s ease;
 }
 
 .main-nav button:hover {
-    background: #0d4825;
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
 }
 
-/* ========================================
-   SEÇÃO 1 — APRESENTAÇÃO
-   ======================================== */
+
+/* =========================================
+   3. SEÇÃO PRINCIPAL - HERO
+========================================= */
 
 .section-main {
     width: 100%;
-    padding: 45px 7%;
-    background: #f2f8f3;
+    background: linear-gradient(110deg, #eaf5ed 0%, #f5faf6 55%, #dcefe1 100%);
+    padding: 65px 5%;
 }
 
 .apresentação {
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1200px;
     min-height: 390px;
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 45px;
+    gap: 55px;
 }
 
 .conteudo {
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .fome {
-    color: #176b3a;
-    font-size: 12px;
+    color: var(--verde-principal);
+    font-size: 13px;
     font-weight: 800;
-    letter-spacing: 1.8px;
+    letter-spacing: 2px;
     margin-bottom: 15px;
 }
 
 .alimentos {
-    color: #164f30;
-    font-size: clamp(32px, 3.5vw, 48px);
+    font-family: 'Manrope', sans-serif;
+    color: var(--verde-escuro);
+    font-size: clamp(36px, 4vw, 52px);
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    line-height: 1.15;
+    margin-bottom: 22px;
 }
 
 .green {
-    color: #218447;
+    color: var(--verde-principal);
 }
 
 .descricao {
-    color: #53615a;
-    font-size: 15px;
+    max-width: 530px;
+    color: var(--texto-secundario);
+    font-size: 16px;
     line-height: 1.8;
     margin-bottom: 28px;
-    max-width: 520px;
 }
 
-/* Botões da apresentação */
-
-.conteudo > a {
+.conteudo a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 12px 20px;
-    margin: 0 8px 10px 0;
-    border-radius: 25px;
-    border: 2px solid #176b3a;
-    background: #176b3a;
-    color: #ffffff;
-    font-size: 13px;
+    gap: 9px;
+
+    padding: 13px 20px;
+    margin: 0 10px 10px 0;
+
+    border: 1px solid var(--verde-principal);
+    border-radius: 8px;
+
+    background-color: var(--verde-principal);
+    color: var(--branco);
+
+    font-size: 14px;
     font-weight: 700;
-    transition: all 0.3s;
+
+    transition: 0.3s ease;
 }
 
-.conteudo > a svg {
+.conteudo a svg {
     width: 19px;
     height: 19px;
     fill: currentColor;
 }
 
-.conteudo > a:hover {
-    background: #0d4825;
-    border-color: #0d4825;
+.conteudo a:hover {
+    background-color: var(--verde-escuro);
+    border-color: var(--verde-escuro);
+    transform: translateY(-3px);
 }
 
-.conteudo > a#claro {
-    background: #ffffff;
-    color: #176b3a;
+/* Segundo botão */
+
+.conteudo a#claro {
+    background-color: transparent;
+    color: var(--verde-principal);
 }
 
-.conteudo > a#claro:hover {
-    background: #e4f2e7;
+.conteudo a#claro:hover {
+    background-color: var(--verde-principal);
+    color: var(--branco);
 }
 
 /* Imagem principal */
 
 .img-fundo {
     width: 100%;
-    height: 360px;
+    height: 370px;
     object-fit: cover;
     object-position: center;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(20, 83, 45, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(22, 79, 48, 0.13);
 }
 
-/* ========================================
-   SEÇÃO 2 — NOSSO IMPACTO
-   ======================================== */
+
+/* =========================================
+   4. SEÇÃO DE DADOS / IMPACTO
+========================================= */
 
 .section-dados {
-    padding: 40px 7%;
-    background: #ffffff;
+    width: 100%;
+    padding: 65px 5%;
+    background-color: var(--branco);
 }
 
 .dados-ajuda {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .impacto {
     grid-column: 1 / -1;
-    color: #164f30;
-    font-size: 28px;
-    margin-bottom: 5px;
+    text-align: center;
+
+    font-family: 'Manrope', sans-serif;
+    color: var(--verde-escuro);
+    font-size: 30px;
+    font-weight: 800;
+
+    margin-bottom: 12px;
 }
 
-.dados-ajuda .dado {
-    min-width: 0;
-    min-height: 160px;
-    padding: 22px 12px;
-    background: #f0f8f3;
-    border: 1px solid #e4f0e6;
-    border-radius: 12px;
+.dado {
+    padding: 27px 15px;
+    background-color: var(--verde-suave);
+    border: 1px solid var(--borda);
+    border-radius: 13px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.dado:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(22, 79, 48, 0.08);
+}
+
+.dado h3 {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.dados-ajuda .dado:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(22, 107, 58, 0.09);
-}
-
-.dados-ajuda .dado h3 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 10px;
-    color: #164f30;
-    font-size: 27px;
-    line-height: 1.3;
+
+    color: var(--verde-principal);
+    font-family: 'Manrope', sans-serif;
+    font-size: 31px;
+    font-weight: 800;
     margin-bottom: 8px;
 }
 
-.dados-ajuda .dado svg {
-    width: 32px;
-    height: 32px;
+.dado h3 svg {
+    width: 27px;
+    height: 27px;
     flex-shrink: 0;
 }
 
-.dados-ajuda .dado p {
-    color: #53615a;
-    font-size: 12px;
+.dado p {
+    color: var(--texto-secundario);
+    font-size: 14px;
 }
 
-/* ========================================
-   SEÇÃO 3 — COMO VOCÊ PODE AJUDAR
-   ======================================== */
+
+/* =========================================
+   5. SEÇÃO COMO VOCÊ PODE AJUDAR
+========================================= */
 
 .section-ajudar {
-    padding: 50px 7%;
-    background: #f2f8f3;
+    width: 100%;
+    padding: 75px 5%;
+    background-color: var(--verde-suave);
 }
 
 .como-ajudar {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
+
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
 }
 
 .como {
     grid-column: 1 / -1;
-    color: #164f30;
-    font-size: 30px;
-    line-height: 1.3;
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 0;
 }
 
 .subtitulo-ajuda {
     grid-column: 1 / -1;
-    color: #53615a;
-    font-size: 15px;
+    color: var(--texto-secundario);
+    font-size: 16px;
+    text-align: center;
     margin-top: -12px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .ajuda {
-    min-width: 0;
-    padding: 25px 20px;
-    background: #ffffff;
-    border: 1px solid #e2eee5;
+    padding: 28px;
+    background-color: var(--branco);
+    border: 1px solid var(--borda);
     border-radius: 14px;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 0 5px 18px rgba(20, 83, 45, 0.04);
-    transition: transform 0.3s, box-shadow 0.3s;
+
+    transition: 0.3s ease;
 }
 
 .ajuda:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(20, 83, 45, 0.09);
+    box-shadow: 0 10px 25px rgba(22, 79, 48, 0.08);
 }
 
 .ajuda h3 {
-    color: #176b3a;
-    font-size: 18px;
-    line-height: 1.4;
+    color: var(--verde-principal);
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
     margin-bottom: 12px;
 }
 
 .ajuda p {
-    color: #53615a;
-    font-size: 13px;
-    line-height: 1.8;
-    margin-bottom: 22px;
-    flex-grow: 1;
-}
-
-.ajuda a {
-    color: #176b3a;
-    font-size: 12px;
-    font-weight: 700;
-    margin-top: auto;
-}
-
-.ajuda a:hover {
-    color: #0d4825;
-}
-
-/* ========================================
-   SEÇÃO 4 — NOSSOS PROJETOS
-   ======================================== */
-
-.section-projetos {
-    padding: 50px 7%;
-    background: #ffffff;
-}
-
-.projetos {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.titulo-secao {
-    color: #164f30;
-    font-size: 30px;
-    line-height: 1.3;
-    margin-bottom: 10px;
-}
-
-.subtitulo-projetos {
-    color: #53615a;
+    color: var(--texto-secundario);
     font-size: 15px;
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
-.link-projetos {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 11px 20px;
-    border-radius: 25px;
-    background: #176b3a;
-    color: #ffffff;
-    font-size: 12px;
+.ajuda a {
+    color: var(--verde-principal);
+    font-size: 14px;
     font-weight: 700;
-    transition: background 0.3s;
+    margin-top: auto;
+    transition: 0.3s ease;
 }
 
-.link-projetos:hover {
-    background: #0d4825;
+.ajuda a:hover {
+    color: var(--verde-escuro);
+    text-decoration: underline;
 }
 
-.lista-projetos {
-    margin-top: 25px;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
+
+/* =========================================
+   6. SEÇÃO NOSSOS PROJETOS
+========================================= */
+
+.section-projetos {
+    width: 100%;
+    padding: 75px 5%;
+    background-color: var(--branco);
 }
 
-/* ========================================
-   RODAPÉ
-   ======================================== */
-
-.rodape {
-    padding: 35px 7% 15px;
-    background: linear-gradient(110deg, #0c482b, #125c35);
-    color: #ffffff;
-}
-
-.conteudo-rodape {
-    max-width: 1400px;
+.projetos {
+    max-width: 1200px;
     margin: 0 auto;
-    padding-bottom: 25px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr 1fr;
-    gap: 40px;
+    text-align: center;
 }
 
-.info-rodape h2 {
-    font-size: 19px;
-    margin-bottom: 2px;
-}
-
-.info-rodape p:first-of-type {
-    color: #d5e6da;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
+.titulo-secao {
+    color: var(--verde-escuro);
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
     margin-bottom: 12px;
 }
 
-.info-rodape p:last-of-type {
-    max-width: 340px;
-    color: #d5e6da;
-    font-size: 12px;
+.subtitulo-projetos {
+    color: var(--texto-secundario);
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.link-projetos {
+    display: inline-block;
+    background-color: var(--verde-principal);
+    color: var(--branco);
+    padding: 12px 23px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.link-projetos:hover {
+    background-color: var(--verde-escuro);
+    transform: translateY(-2px);
+}
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 35px;
+}
+
+
+/* =========================================
+   7. RODAPÉ
+========================================= */
+
+.rodape {
+    width: 100%;
+    padding: 55px 5% 20px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+}
+
+.conteudo-rodape {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.2fr;
+    gap: 45px;
+}
+
+.info-rodape h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.info-rodape p,
+.contato-rodape p {
+    color: #d5e5d9;
+    font-size: 14px;
     line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.info-rodape p:first-of-type {
+    margin-bottom: 15px;
 }
 
 .links-rodape,
@@ -443,180 +485,196 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
 }
 
 .links-rodape h3,
 .contato-rodape h3 {
-    font-size: 14px;
-    margin-bottom: 5px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    margin-bottom: 15px;
 }
 
-.links-rodape a,
-.contato-rodape p {
-    color: #d5e6da;
-    font-size: 12px;
-    line-height: 1.7;
+.links-rodape a {
+    color: #d5e5d9;
+    font-size: 14px;
+    margin-bottom: 9px;
+    transition: 0.3s ease;
 }
 
 .links-rodape a:hover {
-    color: #a8e6b9;
+    color: var(--branco);
+    padding-left: 4px;
 }
 
 .direitos-rodape {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    max-width: 1200px;
+    margin: 35px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
 
 .direitos-rodape p {
-    color: #d5e6da;
-    font-size: 11px;
+    color: #d5e5d9;
+    font-size: 13px;
 }
 
-/* ========================================
-   RESPONSIVIDADE — TABLETS
-   ======================================== */
 
-@media (max-width: 1050px) {
+/* =========================================
+   8. RESPONSIVIDADE - TABLETS
+========================================= */
+
+@media (max-width: 1000px) {
+
     .site-header .container {
         flex-direction: column;
+        padding: 18px 0;
         gap: 15px;
     }
 
     .main-nav {
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 14px 20px;
+        flex-wrap: wrap;
+        gap: 15px 20px;
     }
 
     .apresentação {
-        gap: 25px;
-        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .alimentos {
+        font-size: 39px;
     }
 
     .img-fundo {
-        height: 300px;
+        height: 320px;
     }
 
-    .como-ajudar {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .dados-ajuda {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .conteudo-rodape {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .info-rodape {
-        grid-column: 1 / -1;
+        gap: 25px;
     }
 }
 
-/* ========================================
-   RESPONSIVIDADE — CELULARES
-   ======================================== */
 
-@media (max-width: 650px) {
-    .site-header {
-        padding: 18px 5%;
-    }
+/* =========================================
+   9. RESPONSIVIDADE - CELULARES
+========================================= */
+
+@media (max-width: 700px) {
 
     .site-header .container {
         align-items: flex-start;
     }
 
+    .titulo {
+        font-size: 20px;
+    }
+
     .main-nav {
-        width: 100%;
         justify-content: flex-start;
         gap: 12px 16px;
     }
 
     .main-nav a {
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .main-nav button {
-        margin-left: 0;
+        padding: 9px 17px;
     }
 
+    /* Hero */
+
     .section-main {
-        padding: 35px 6%;
+        padding: 45px 5%;
     }
 
     .apresentação {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
     }
 
     .alimentos {
-        font-size: 34px;
+        font-size: 36px;
     }
 
     .descricao {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .img-fundo {
-        height: 240px;
+        height: 260px;
     }
 
-    .conteudo > a {
-        font-size: 12px;
-        padding: 10px 14px;
-    }
+    /* Impacto */
 
     .section-dados {
-        padding: 35px 6%;
+        padding: 50px 5%;
     }
 
     .dados-ajuda {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px;
+        grid-template-columns: 1fr 1fr;
+        gap: 13px;
     }
 
     .impacto {
-        font-size: 25px;
+        font-size: 26px;
     }
 
-    .dados-ajuda .dado {
-        min-height: 135px;
-        padding: 15px 8px;
+    .dado {
+        padding: 20px 10px;
     }
 
-    .dados-ajuda .dado h3 {
-        font-size: 22px;
+    .dado h3 {
+        font-size: 24px;
+        gap: 6px;
     }
 
-    .dados-ajuda .dado p {
-        font-size: 11px;
+    .dado h3 svg {
+        width: 21px;
+        height: 21px;
     }
 
-    .section-ajudar,
-    .section-projetos {
-        padding: 35px 6%;
+    .dado p {
+        font-size: 12px;
+    }
+
+    /* Como ajudar */
+
+    .section-ajudar {
+        padding: 55px 5%;
     }
 
     .como-ajudar {
         grid-template-columns: 1fr;
-        gap: 15px;
+        gap: 16px;
     }
 
     .como {
-        font-size: 26px;
+        font-size: 27px;
     }
 
     .subtitulo-ajuda {
         font-size: 14px;
-        margin-top: -5px;
+        margin-top: 0;
     }
 
     .ajuda {
-        padding: 22px;
+        padding: 24px;
+    }
+
+    /* Projetos */
+
+    .section-projetos {
+        padding: 55px 5%;
     }
 
     .titulo-secao {
-        font-size: 26px;
+        font-size: 27px;
     }
 
     .subtitulo-projetos {
@@ -627,16 +685,18 @@ img {
         grid-template-columns: 1fr;
     }
 
+    /* Rodapé */
+
     .rodape {
-        padding: 30px 6% 15px;
+        padding: 45px 5% 20px;
     }
 
     .conteudo-rodape {
         grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 30px;
     }
 
-    .info-rodape {
-        grid-column: auto;
+    .direitos-rodape {
+        margin-top: 30px;
     }
 }

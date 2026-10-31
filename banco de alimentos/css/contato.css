@@ -1,0 +1,565 @@
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f4f9f5;
+    color: #596b5e;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h6 {
+    font-family: 'Manrope', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.site-header {
+    background-color: #ffffff;
+    padding: 18px 5%;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo .titulo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #164f30;
+}
+
+.logo .p {
+    font-size: 13px;
+    color: #718174;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.main-nav a {
+    color: #43594a;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: #176b3a;
+}
+
+.main-nav button {
+    background-color: #176b3a;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.main-nav button:hover {
+    background-color: #10552d;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SEÇÃO 1 - FALE CONOSCO
+======================================== */
+
+.model-fale {
+    max-width: 1200px;
+    margin: 65px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.model-fal h6 {
+    color: #176b3a;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.model-fal h1 {
+    color: #164f30;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 18px;
+}
+
+.model-fal p {
+    color: #596b5e;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.model-fal img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 13px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Cartões de telefone, e-mail e endereço */
+
+.model {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.model-tele {
+    background-color: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e7eee8;
+    display: grid;
+    grid-template-columns: 48px 1fr;
+    align-items: center;
+    column-gap: 15px;
+    transition: 0.3s;
+}
+
+.model-tele:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.08);
+}
+
+.model-tele svg {
+    grid-row: span 2;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    background-color: #176b3a;
+    border-radius: 10px;
+}
+
+.model-tele h6 {
+    color: #164f30;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.model-tele p {
+    color: #596b5e;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   SEÇÃO 2 - OUTRAS FORMAS DE CONTATO
+======================================== */
+
+.model-form {
+    background-color: #eaf5ed;
+    padding: 65px 25px;
+}
+
+.model-nosso {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.model-nosso h6 {
+    color: #176b3a;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.model-nosso h1 {
+    color: #164f30;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.model-cards {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.cards1,
+.cards2,
+.cards3,
+.cards4 {
+    background-color: #ffffff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    border: 1px solid #e5eee7;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.cards1:hover,
+.cards2:hover,
+.cards3:hover,
+.cards4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.model-cards svg {
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    background-color: #176b3a;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.model-cards h6 {
+    color: #164f30;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.model-cards p {
+    color: #596b5e;
+    font-size: 14px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   FORMULÁRIO DE CONTATO
+======================================== */
+
+.forms-1 {
+    max-width: 750px;
+    margin: 45px auto 0;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 13px;
+    border: 1px solid #e5eee7;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-duvida {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-duvida label {
+    color: #164f30;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.form-duvida input,
+.form-duvida select,
+.form-duvida textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d6e2d8;
+    border-radius: 7px;
+    background-color: #fbfdfb;
+    color: #43594a;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-duvida input:focus,
+.form-duvida select:focus,
+.form-duvida textarea:focus {
+    border-color: #176b3a;
+    box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.10);
+}
+
+.form-duvida input::placeholder,
+.form-duvida textarea::placeholder {
+    color: #9aa89d;
+}
+
+.form-duvida textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#btn-env {
+    background-color: #176b3a;
+    color: #ffffff;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: 0.3s;
+}
+
+#btn-env:hover {
+    background-color: #10552d;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SEÇÃO 3 - LOCALIZAÇÃO
+======================================== */
+
+.section-localizacao {
+    max-width: 1200px;
+    margin: 65px auto;
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    align-items: center;
+    gap: 45px;
+}
+
+.localizacao-texto h2 {
+    color: #164f30;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.localizacao-texto p {
+    color: #596b5e;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.mapa {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 13px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.mapa iframe {
+    display: block;
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape {
+    background-color: #164f30;
+    color: #ffffff;
+    padding: 50px 5% 20px;
+}
+
+.conteudo-rodape {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    gap: 45px;
+}
+
+.info-rodape h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 21px;
+    margin-bottom: 5px;
+}
+
+.info-rodape p,
+.contato-rodape p {
+    color: #d7e8dc;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.info-rodape p:first-of-type {
+    color: #a9d5b5;
+    font-weight: 600;
+}
+
+.links-rodape h3,
+.contato-rodape h3 {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+.links-rodape {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.links-rodape a {
+    color: #d7e8dc;
+    font-size: 14px;
+    margin-bottom: 9px;
+    transition: 0.3s;
+}
+
+.links-rodape a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+.direitos-rodape {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.direitos-rodape p {
+    color: #d7e8dc;
+    font-size: 13px;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 950px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .main-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .model-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .conteudo-rodape {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .model-fale {
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+        gap: 30px;
+    }
+
+    .model-fal h1 {
+        font-size: 30px;
+    }
+
+    .model-fal p br {
+        display: none;
+    }
+
+    .model-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .model-nosso h1 {
+        font-size: 27px;
+    }
+
+    .forms-1 {
+        padding: 23px 18px;
+    }
+
+    .section-localizacao {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 45px auto;
+    }
+
+    .localizacao-texto h2 {
+        font-size: 26px;
+    }
+
+    .mapa iframe {
+        height: 300px;
+    }
+
+    .conteudo-rodape {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .site-header {
+        padding: 18px 15px;
+    }
+
+    .logo .titulo {
+        font-size: 19px;
+    }
+
+    .main-nav {
+        gap: 12px;
+    }
+
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .model-fale,
+    .section-localizacao {
+        padding: 0 18px;
+    }
+
+    .model-fal h1 {
+        font-size: 27px;
+    }
+
+    .model-tele {
+        padding: 18px;
+    }
+
+    .model-form {
+        padding: 45px 18px;
+    }
+
+    .forms-1 {
+        padding: 20px 15px;
+    }
+}
