@@ -563,3 +563,18 @@ a {
         padding: 20px 15px;
     }
 }
+
+
+
+#mensagem {
+    display: none;
+    background-color: #eaf5ed;
+    color: #176b3a;
+    border: 1px solid #b8dcc2;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 15px;
+}

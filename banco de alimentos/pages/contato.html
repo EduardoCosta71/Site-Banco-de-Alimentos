@@ -157,7 +157,7 @@
 
             <div class="forms-1">
 
-                <form class="form-duvida">
+                <form class="form-duvida" id="form-duvida" method="POST">
 
                 <label for="nome">Nome completo:</label>
                 <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
@@ -180,12 +180,13 @@
             
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea class="mensagem" name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+                <textarea class="mensagem" name="mensagem" id="mensagens" placeholder="Digite sua mensagem aqui..."></textarea>
 
                 <button id="btn-env" type="submit">Enviar</button>
 
-
                 </form>
+
+                <p id="mensagem" role="status" class="btn-class"></p>
 
             </div>
 
@@ -269,5 +270,6 @@
 </footer>
 
 
+    <script src="../js/contato.js"></script>
 </body>
 </html>
