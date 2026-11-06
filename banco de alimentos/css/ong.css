@@ -595,6 +595,50 @@ a {
 
 
 /* =========================================
+   8. SEÇÃO FAQ
+========================================= */
+
+.faq {
+    padding: 50px 8%;
+}
+
+.faq h2 {
+    text-align: center;
+    color: #164f30;
+    margin-bottom: 30px;
+}
+
+.pergunta {
+    margin-bottom: 12px;
+}
+
+.faq-botao {
+    width: 100%;
+    padding: 18px;
+    border: 1px solid #dce8df;
+    border-radius: 10px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #164f30;
+}
+
+.resposta {
+    display: none;
+    padding: 15px 18px;
+    background: #eaf5ed;
+}
+
+.resposta.aberta {
+    display: block;
+}
+
+
+/* =========================================
    9. RESPONSIVIDADE - TABLETS
 ========================================= */
 
