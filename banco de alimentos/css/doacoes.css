@@ -532,6 +532,130 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
+
+/* =================================
+   Formulario de Doação Financeira
+================================= */
+
+.form-financeiro {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+/* Cartão branco do formulário */
+.conteudo-formulario {
+    background: #ffffff;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.form-financeiro[hidden] {
+    display: none !important;
+}
+
+.form-financeiro h2 {
+    color: #164f30;
+    margin-bottom: 10px;
+}
+
+.form-financeiro form {
+    background: #ffffff;
+    width: 90%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+
+}
+
+.form-financeiro input {
+    padding: 12px;
+    border: 1px solid #dce8df;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.botoes-financeiro {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.botoes-financeiro button {
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #176b3a;
+    color: white;
+}
+
+.botoes-financeiro button:last-child {
+    background: #777777;
+}
+
+#mensagem-financeira {
+    display: none;
+    text-align: center;
+    color: #176b3a;
+    font-weight: bold;
+    margin: 15px;
+}
+
+
+.modal-sucesso {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.modal-sucesso[hidden] {
+    display: none !important;
+}
+
+.conteudo-sucesso {
+    background: white;
+    padding: 35px;
+    border-radius: 15px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+}
+
+.conteudo-sucesso h2 {
+    color: #176b3a;
+    margin-bottom: 15px;
+}
+
+.conteudo-sucesso button {
+    background: #176b3a;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
 /* =================================
    RODAPÉ
 ================================= */

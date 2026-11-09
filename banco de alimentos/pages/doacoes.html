@@ -132,15 +132,65 @@
                     projetos e ampliar o atendimento ás famílias.
                 </p> 
 
-                <button><svg xmlns="http://www.w3.org/2000/svg" id="emoji-doa" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M400-240h40v-160q25 0 42.5-17.5T500-460v-120h-40v120h-20v-120h-40v120h-20v-120h-40v120q0 25 17.5 42.5T400-400v160Zm160 0h40v-340q-33 0-56.5 23.5T520-500v120h40v140ZM160-120v-480l320-240 320 240v480H160Zm80-80h480v-360L480-740 240-560v360Zm240-270Z"/></svg>Quero doar agora</button>
+                <button type="button" id="abrir-form-financeiro">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="emoji-doa" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M400-240h40v-160q25 0 42.5-17.5T500-460v-120h-40v120h-20v-120h-40v120h-20v-120h-40v120q0 25 17.5 42.5T400-400v160Zm160 0h40v-340q-33 0-56.5 23.5T520-500v120h40v140ZM160-120v-480l320-240 320 240v480H160Zm80-80h480v-360L480-740 240-560v360Zm240-270Z"/></svg>
+                    Quero doar agora
+                
+                </button>
 
                 <img src="../assets/images/doacoes.jpg" alt="Imagem ilustrativa">
 
 
             </div>
 
+    <!-- Formulário de doação financeira -->
+    <div class="form-financeiro" id="form-financeiro" hidden>
 
+    <h2>Doação financeira</h2>
+    <p>Preencha seus dados para registrar sua intenção de contribuição.</p>
+
+    <form id="formulario-financeiro">
+
+        <label for="nome-financeiro">Nome completo:</label>
+        <input type="text" id="nome-financeiro" novalidate 
+        placeholder="Digite seu nome">
+
+        <label for="email-financeiro">E-mail:</label>
+        <input type="email" id="email-financeiro" novalidate
+        placeholder="Digite seu e-mail">
+
+        <label for="valor-financeiro">Valor da contribuição:</label>
+        <input type="number" id="valor-financeiro"
+        min="1" step="0.01" novalidate placeholder="Ex: 50">
+
+        <div class="botoes-financeiro">
+
+            <button type="submit">Enviar</button>
             
+            <button type="button" id="cancelar-financeiro">Cancelar</button>
+        </div>
+
+    </form>
+
+</div>
+
+        <!--Mensagem de sucesso-->
+    <div class="modal-sucesso" id="modal-sucesso" hidden>
+
+    <div class="conteudo-sucesso">
+
+        <h2>Doação registrada!</h2>
+        <p>Seu formulário foi enviado com sucesso. Obrigado por contribuir!</p>
+       
+        <button type="button" id="fechar-sucesso">Fechar</button>
+
+    </div>
+
+    </div>
+
+    <p id="mensagem-financeira" role="status"></p>
+
+
             <div class="doacao-form">
 
                 <h1>Doação de alimentos</h1>
@@ -154,17 +204,17 @@
             <form class="form-doacao">
 
                 <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" novalidate>
                 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+                <input type="email" id="email" name="email" placeholder="Digite seu e-mail" novalidate>
 
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="(__) _____-____" required>
+                <input type="tel" id="telefone" name="telefone" placeholder="(__) _____-____" novalidate>
                 
                 
                 <label>Escolha o tipo de alimento:</label>
-                <select name="tipo-doacao" id="tipo-doacao">
+                <select name="tipo-doacao" id="tipo-doacao" novalidate>
 
                     <option value="">Selecione o tipo de alimento</option>
                     <option value="arroz">Arroz</option>
@@ -180,6 +230,8 @@
                 <textarea class="mensag" name="mensagem" id="mensagens" placeholder="Conte mais sobre a sua doação"></textarea>
 
                 <button id="btn-env" type="submit">Enviar</button>
+
+                <p id="mensagem-doacao" role="status"></p>
 
             </form>
                 
