@@ -86,7 +86,7 @@ form.addEventListener('submit', function(event) {
         return; // Sai da função se algum campo estiver vazio.
     }
 
-
+    
     mensagemAli.textContent = 'Doação registrada com sucesso! Sua doação é muito importante para a comunidade.'; // Exibe a mensagem de sucesso
     mensagemAli.style.display = 'block'; // Exibe a mensagem
 

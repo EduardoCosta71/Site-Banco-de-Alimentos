@@ -146,12 +146,12 @@
                 <form class="form-voluntario">
 
                 <label for="nome">Nome completo:</label>
-                <input type="text" id="nome" name="nome" placeholder="Nome completo"  required>
+                <input type="text" id="nome" name="nome" placeholder="Nome completo"  novalidate>
                 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" novalidate>
 
-                <select name="area_interesse" id="area_interesse" required>
+                <select name="area_interesse" id="area_interesse" novalidate>
 
                     <option value="" selected disabled>Área de interesse</option>
                     <option value="distribuicao">Distribuição de alimentos</option>
@@ -162,7 +162,7 @@
                     
                 </select>
 
-                <select name="disponibilidade" id="disponibilidade" required>
+                <select name="disponibilidade" id="disponibilidade" novalidate>
 
                     <option value="" selected disabled>Disponibilidade</option>
                     <option value="manha">Durante a semana - Manhã</option>
@@ -174,16 +174,15 @@
                 </select>
 
                 <button class="mods"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill="#F3F3F3"><path d="M12.9,21l-2.85-7.05L3,11.1V9.7L21,3L14.3,21H12.9Zm0.65-3.7L17.6,6.4L6.7,10.45l4.9,1.95l1.95,4.9ZM11.6,12.4Z"/></svg>Enviar inscrição</button>
+ 
+                
+                <p id="mensagem-voluntario" role="status"></p>
 
-                    
                 </form>
-
 
             </div>
 
-
         </section>
-
 
     </main>
 
@@ -229,9 +228,6 @@
         </p>
     </div>
 </footer>
-
-
-
 
     
     <script src="../js/voluntario.js"></script>
