@@ -295,7 +295,7 @@ a {
    6. CARD DE CONVITE
 ========================================= */
 
-.model-cont {
+.model-conte {
     width: 100%;
     max-width: 1150px;
     margin: 55px auto 0;
@@ -493,6 +493,47 @@ a {
         grid-column: 1 / -1;
     }
 }
+
+
+
+/* Filtros dos projetos */
+
+.filtro-projetos {
+    grid-column: 1 / -1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.filtro-btn {
+    padding: 11px 24px;
+    background-color: white;
+    color: #176b3a;
+
+    border: 1px solid #176b3a;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filtro-btn:hover {
+    background-color: #eaf5ed;
+}
+
+.filtro-btn.ativo {
+    background-color: #176b3a;
+    color: white;
+}
+
 
 
 /* =========================================
