@@ -15,6 +15,18 @@ body {
     color: #596b5e;
 }
 
+:root {
+    --verde-principal: #176b3a;
+    --verde-escuro: #164f30;
+    --verde-claro: #eaf5ed;
+    --verde-suave: #f7faf7;
+    --texto: #26352b;
+    --texto-secundario: #647268;
+    --branco: #ffffff;
+    --borda: #e1eae3;
+    --dourado: #d6a84b;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Manrope', sans-serif;
 }
@@ -562,7 +574,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-financeiro[hidden] {
-    display: none !important;
+    display: none;
 }
 
 .form-financeiro h2 {
@@ -629,7 +641,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .modal-sucesso[hidden] {
-    display: none !important;
+    display: none;
 }
 
 .conteudo-sucesso {
@@ -841,5 +853,238 @@ h1, h2, h3, h4, h5, h6 {
     .conteudo-rodape {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+}
+
+/* IDENTIDADE VISUAL E ACESSIBILIDADE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--verde-suave);
+    color: var(--texto);
+    line-height: 1.65;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    padding: 0;
+    border-bottom: 1px solid var(--borda);
+    box-shadow: 0 4px 18px rgba(22, 79, 48, 0.06);
+}
+
+.site-header .container {
+    min-height: 82px;
+}
+
+.main-nav a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    color: var(--texto);
+}
+
+.main-nav a:hover {
+    color: var(--verde-principal);
+}
+
+.main-nav button,
+.expli button,
+.form-doacao button,
+.impact button,
+.botoes-financeiro button,
+.conteudo-sucesso button {
+    min-height: 44px;
+    background-color: var(--verde-principal);
+}
+
+.esperanca,
+.forma-de-doacao {
+    background-color: var(--verde-claro);
+}
+
+.alimentos,
+.formas-do,
+.dado,
+.doacao-form,
+.form-doacao,
+.expli {
+    border: 1px solid var(--borda);
+    box-shadow: 0 10px 28px rgba(22, 79, 48, 0.06);
+}
+
+.alimentos,
+.formas-do,
+.dado {
+    border-radius: 16px;
+}
+
+.form-doacao input,
+.form-doacao select,
+.form-doacao textarea,
+.form-financeiro input {
+    min-height: 48px;
+    border-color: var(--borda);
+    color: var(--texto);
+}
+
+.form-doacao textarea {
+    min-height: 120px;
+}
+
+.form-doacao input:focus,
+.form-doacao select:focus,
+.form-doacao textarea:focus,
+.form-financeiro input:focus {
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.16);
+}
+
+#mensagem-doacao {
+    display: none;
+    padding: 14px 16px;
+    border: 1px solid #b8dcc2;
+    border-radius: 10px;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+.form-financeiro {
+    flex-direction: column;
+    gap: 0;
+    padding: 24px 16px;
+    overflow-y: auto;
+}
+
+.form-financeiro h2,
+.form-financeiro > p,
+.form-financeiro form {
+    width: 90%;
+    max-width: 450px;
+    margin: 0;
+    background-color: var(--branco);
+}
+
+.form-financeiro h2 {
+    padding: 26px 26px 8px;
+    border-radius: 16px 16px 0 0;
+}
+
+.form-financeiro > p {
+    padding: 0 26px 12px;
+}
+
+.form-financeiro form {
+    padding: 12px 26px 26px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.form-financeiro[hidden],
+.modal-sucesso[hidden] {
+    display: none;
+}
+
+.conteudo-sucesso {
+    border: 1px solid var(--borda);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-sucesso,
+.form-financeiro {
+    padding: 20px;
+}
+
+#mensagem-financeira {
+    color: var(--verde-escuro);
+}
+
+.rodape {
+    background-color: var(--verde-escuro);
+}
+
+.direitos-rodape {
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+    .site-header .container {
+        align-items: flex-start;
+        padding: 16px 0;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .esperanca {
+        align-items: stretch;
+    }
+
+    .form-financeiro {
+        padding: 14px;
+    }
+
+    .form-financeiro h2,
+    .form-financeiro > p,
+    .form-financeiro form {
+        width: 100%;
+    }
+
+    .form-financeiro h2 {
+        padding: 22px 20px 8px;
+    }
+
+    .form-financeiro > p {
+        padding: 0 20px 12px;
+    }
+
+    .form-financeiro form {
+        padding: 12px 20px 22px;
+    }
+
+    .botoes-financeiro {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .conteudo-formulario {
+        padding: 22px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }

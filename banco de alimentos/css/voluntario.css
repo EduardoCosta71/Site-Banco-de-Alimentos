@@ -15,6 +15,18 @@ body {
     color: #596b5e;
 }
 
+:root {
+    --verde-principal: #176b3a;
+    --verde-escuro: #164f30;
+    --verde-claro: #eaf5ed;
+    --verde-suave: #f7faf7;
+    --texto: #26352b;
+    --texto-secundario: #647268;
+    --branco: #ffffff;
+    --borda: #e1eae3;
+    --dourado: #d6a84b;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Manrope', sans-serif;
 }
@@ -505,5 +517,146 @@ h1, h2, h3, h4, h5, h6 {
     .conteudo-rodape {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+}
+
+/* IDENTIDADE VISUAL E ACESSIBILIDADE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--verde-suave);
+    color: var(--texto);
+    line-height: 1.65;
+}
+
+img {
+    max-width: 100%;
+}
+
+.site-header {
+    padding: 0;
+    border-bottom: 1px solid var(--borda);
+    box-shadow: 0 4px 18px rgba(22, 79, 48, 0.06);
+}
+
+.site-header .container {
+    min-height: 82px;
+}
+
+.main-nav a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    color: var(--texto);
+}
+
+.main-nav a:hover {
+    color: var(--verde-principal);
+}
+
+.main-nav button,
+.volunt a,
+.mods {
+    min-height: 44px;
+    background-color: var(--verde-principal);
+}
+
+.section-volun,
+.section-inscricao {
+    background-color: var(--verde-claro);
+}
+
+.model,
+.form-voluntario {
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(22, 79, 48, 0.06);
+}
+
+.form-voluntario input,
+.form-voluntario select {
+    min-height: 48px;
+    border-color: var(--borda);
+    color: var(--texto);
+}
+
+.form-voluntario input:focus,
+.form-voluntario select:focus {
+    border-color: var(--verde-principal);
+    box-shadow: 0 0 0 3px rgba(23, 107, 58, 0.16);
+}
+
+#mensagem-voluntario {
+    display: none;
+    padding: 14px 16px;
+    border: 1px solid #b8dcc2;
+    border-radius: 10px;
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+}
+
+.rodape {
+    background-color: var(--verde-escuro);
+}
+
+.direitos-rodape {
+    border-color: rgba(255, 255, 255, 0.24);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--dourado);
+    outline-offset: 3px;
+}
+
+@media (max-width: 650px) {
+    .site-header .container {
+        align-items: flex-start;
+        padding: 16px 0;
+    }
+
+    .main-nav {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .volunt {
+        width: 100%;
+    }
+
+    .section-inscricao {
+        padding-right: 6%;
+        padding-left: 6%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-nav a {
+        font-size: 13px;
+    }
+
+    .form-voluntario {
+        padding: 20px 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
     }
 }
