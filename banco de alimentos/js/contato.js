@@ -18,10 +18,10 @@ form.addEventListener('submit', function(event) {
         return; // Sai da função se algum campo estiver vazio
     }
 
-
+    
     mensagem.textContent = 'Mensagem enviada com sucesso!'; // Exibe a mensagem de sucesso
     mensagem.style.display = 'block'; // Exibe a mensagem
-
+                                                    
     form.reset(); // Limpa os campos do formulário
     
 
