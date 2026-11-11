@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Banco de Alimentos</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <div class="login-header">
+
+            <img src="../assets/images/von.jpg" alt="Ilustrativa" class="vonl">
+
+            <h1 class="titulo">🥗 Banco de Alimentos</h1>
+            <p class="p">Combate à fome</p>
+
+            <h1>Juntos contra a fome</h1>
+
+            <p>Faça parte desta causa. <br>
+            Doe, contribua e ajude a combater a fome!</p>
+
+
+        </div>
+        
+        <div class="login-form">
+
+        <h1>Acesse sua conta</h1>
+
+        <p>Entre para acompanhar suas doações e voluntariados </p>
+
+        <form id="loginForm">
+
+            <label for="username">E-mail ou CPF:</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill=" #176b3a"><path d="M4,20q-0.82,0-1.41-0.59T2,18V6Q2,5.18 2.59,4.59T4,4H20q0.83,0 1.41,0.59Q22,5.18 22,6V18q0,0.82-0.59,1.41T20,20H4Zm8-7L4,8V18H20V8l-8,5Zm0-2l8-5H4l8,5ZM4,8V6V8V18V8Z"/></svg>
+            <input type="text" id="username" name="username" placeholder="E-mail ou CPF" novalidate >
+
+            <label for="password">Senha:</label>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24px" width="24px" fill=" #176b3a"><path d="M6,22q-0.82,0-1.41-0.59T4,20V10Q4,9.17 4.59,8.59T6,8H7V6Q7,3.92 8.46,2.46T12,1t3.54,1.46T17,6V8h1q0.82,0 1.41,0.59T20,10V20q0,0.82-0.59,1.41T18,22H6Zm0-2H18V10H6V20Zm7.41-3.59Q14,15.83 14,15t-0.59-1.41T12,13t-1.41,0.59Q10,14.18 10,15t0.59,1.41T12,17t1.41-0.59ZM9,8h6V6q0-1.25-0.88-2.13T12,3T9.88,3.88T9,6V8ZM6,20V10V20Z"/></svg>
+            <input type="password" id="password" name="password" placeholder="Senha" novalidate>
+
+
+            <button type="button" id="forgotPasswordBtn">Esqueceu sua senha?</button>
+
+            <p id="mensagem-login"></p>
+
+            <button type="submit">Entrar</button>
+
+            <p>ou</p>
+
+            <p class="register-link">Não tem uma conta? <a href="register.html">Cadastre-se</a></p>
+
+            <p><a href="../../index.html">&larr; Volta para a página inicial</a></p>
+
+        </form>
+
+        </div>
+
+        
+    </div>
+
+    
+
+
+
+
+<script src="../js/login.js"></script>
+
+</body>
+</html>
