@@ -8,6 +8,11 @@ Lucas Lima de Oliveira
 
 Rian Silva Lopes
 
+## Link do Projeto
+
+[Clique neste link para facilitar a visualização!](https://bancodealimentosdutech.netlify.app/)
+
+
 ## TEMA
 Desenvolvimento de um site institucional para um Banco de Alimentos, organização fictícia voltada ao combate à fome, à distribuição de alimentos e ao apoio de famílias em situação de vulnerabilidade social. 
 
@@ -67,3 +72,4 @@ O projeto é composto pelas seguintes páginas:
 - Formulários com validações e interações em JavaScript.
 - Elementos interativos para melhorar a experiência do usuário.
 - Layout responsivo para diferentes tamanhos de tela.
+
